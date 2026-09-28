@@ -41,8 +41,10 @@ function CapabilityBody({ model }) {
 }
 
 function PowerCapabilityCard({ model }) {
+  const isFeatured = model.id === 'powercell-prime';
+
   return (
-    <article className="power-cap-card">
+    <article className={`power-cap-card${isFeatured ? ' power-cap-card--featured' : ''}`}>
       <header className="power-cap-card__header">
         <h3 className="power-cap-card__title">{model.name}</h3>
         <p className="power-cap-card__description">{model.description}</p>
@@ -54,10 +56,11 @@ function PowerCapabilityCard({ model }) {
 
 function PowerCapabilityAccordion({ model, isOpen, onToggle }) {
   const panelId = `power-cap-panel-${model.id}`;
+  const isFeatured = model.id === 'powercell-prime';
 
   return (
     <article
-      className={`power-cap-card power-cap-card--accordion${isOpen ? ' is-open' : ''}`}
+      className={`power-cap-card power-cap-card--accordion${isOpen ? ' is-open' : ''}${isFeatured ? ' power-cap-card--featured' : ''}`}
     >
       <button
         type="button"

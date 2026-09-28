@@ -14,7 +14,7 @@ export default function DesktopComparisonTable() {
     <div className="comparison-table-wrap">
       <table className="comparison-table">
         <caption className="visually-hidden">
-          PowerCell model comparison specifications
+          Powercell model comparison specifications
         </caption>
         <colgroup>
           <col className="comparison-table__col-feature" />
@@ -77,7 +77,7 @@ export default function DesktopComparisonTable() {
           ))}
           <tr className="comparison-table__cta-row">
             <th scope="row">
-              <span className="visually-hidden">Choose a PowerCell</span>
+              <span className="visually-hidden">Choose a Powercell</span>
             </th>
             {comparisonProducts.map((product) => (
               <td

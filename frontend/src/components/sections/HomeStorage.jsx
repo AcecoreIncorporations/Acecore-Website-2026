@@ -34,7 +34,7 @@ export default function HomeStorage() {
             <img
               className="home-storage__product"
               src={powercellImage}
-              alt="Acecore 5kVA PowerCell energy storage unit"
+              alt="Acecore 5kVA Powercell energy storage unit"
             />
           </div>
         </Reveal>

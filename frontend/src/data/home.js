@@ -1,10 +1,10 @@
 export const heroCopy = {
   titleLine1: 'Power Every Moment.',
-  titleLine2: 'Built for Every Tomorrow.',
+  titleLine2: 'Built for Your Future.',
   description:
-    'Intelligent solar and PowerCell solutions that keep your home and business running through every season, every outage, and every opportunity.',
-  primaryCta: { label: 'Get Your PowerCell', to: '/product' },
-  secondaryCta: { label: 'How Acecore works', to: '/about' },
+    'We bring you an intelligent clean energy solution designed to keep your home or business running through every weather, reduce your dependence on the grid, and help you take control of how you use energy.',
+  primaryCta: { label: 'Get Your Powercell', to: '/pricing' },
+  secondaryCta: { label: 'About The Powercell', to: '/product' },
 };
 
 export const heroFeatures = [
@@ -31,36 +31,44 @@ export const heroFeatures = [
 export const introCopy = {
   eyebrow: 'Introducing Acecore',
   lead: 'Acecore has built the next generation of intelligent energy solutions,',
-  muted: 'helping homes and businesses generate, store, and manage power with confidence.',
+  muted: 'helping homes and businesses generate, store, and manage power with confidence and no uncertainty.',
+};
+
+
+
+export const introCopy3 = {
+   eyebrow: 'By 2028 we would have',
 };
 
 export const introStats = [
   {
+   
     id: 'uptime',
-    target: 98.7,
-    decimal: true,
-    suffix: '%',
-    label: 'Uptime',
+    target: 104,
+    decimal: false,
+    suffix: 'K',
+    label: 'Businesses powered',
   },
   {
     id: 'savings',
-    target: 30,
-    suffix: '%',
-    label: 'Avg. Energy Savings',
+    target: 1,
+    suffix: 'M tons',
+    label: 'Of CO₂ Emissions reduced',
   },
   {
     id: 'devices',
-    target: 50000,
+    target: 10000,
     suffix: '+',
-    label: 'Devices online',
+    label: 'Jobs Created',
   },
 ];
+
 
 export const problemCopy = {
   eyebrow: 'The Problem',
   title: "The Grid Wasn't Built for Today.",
   description:
-    'Rising energy costs and unreliable grids leave homes and businesses vulnerable when power matters most.',
+    'Rising energy costs and unreliable grids leave homes and businesses in darkness when power matters most. An average Nigerian has no certainty of 24/7 power.',
 };
 
 export const problemItems = [
@@ -86,14 +94,14 @@ export const problemItems = [
     id: 'co2',
     number: '04',
     title: 'CO₂ Overload in the atmosphere',
-    description: 'Traditional power sources increase costs while impacting the environment.',
+    description: 'Fossil fuel generators are becoming more expensive to run while harming the environment.',
   },
 ];
 
 export const solutionCopy = {
   eyebrow: 'The Solution',
-  title: 'Power, Reinvented for Modern Living.',
-  description: 'An integrated energy ecosystem built for reliable, intelligent power.',
+  title: 'Power That Takes Away Uncertainty.',
+  description: 'Reliable power and intelligent energy management, all in one system.',
 };
 
 export const solutionCards = [
@@ -101,16 +109,16 @@ export const solutionCards = [
     id: 'powercell',
     title: 'Acecore Powercell',
     description:
-      'The Acecore PowerCell is a compact and advanced energy storage solution that combines cutting-edge lithium-ion battery technology with intelligent energy management capabilities. This all-in-one device is designed to revolutionize the way you store and utilize electricity in your home or business.',
+      'The Acecore Powercell is an advanced all-in-one energy storage solution that combines cutting-edge lithium-ion batteries, inverter, Battery Management System, and a solar charge controller with smart energy management capabilities. This amazing device is designed to change the way you store and use electricity in your home or business.',
     cta: { label: 'Get Your Powercell', to: '/pricing' },
     image: 'powercell',
     imageAlt: 'Acecore Powercell energy storage unit',
   },
   {
     id: 'powercore-app',
-    title: 'Acecore Power Core App',
+    title: 'Acecore Powercore App',
     description:
-      'The Acecore PowerCore app is a comprehensive energy management tool designed to empower you with real-time control and insights into your Acecore PowerCell inverter and energy storage system. With this user-friendly application, you can take charge of your energy usage like never before.',
+      'The Acecore Powercore app is a comprehensive energy management tool designed to empower you with real-time control and insights into your Acecore Powercell. The Powercore App uses AI to help you use energy smarter, reduce waste, and take control of your power like never before. It helps control your Powercell from anywhere in the world.',
     cta: { label: 'Get your Powercore App', to: null },
     image: 'powercore',
     imageAlt: 'Acecore Power Core mobile app on a smartphone',
@@ -121,7 +129,7 @@ export const storageCopy = {
   eyebrow: 'Energy Storage',
   title: 'Power What Matters Most.',
   description:
-    'Keep your essential appliances running through outages with reliable backup power from Acecore PowerCell.',
+    'Keep your essential appliances running through outages with reliable backup power from Acecore Powercell.',
   captionBefore: 'Power everyday essentials with our ',
   captionHighlight: '5kVA Power Cell.',
 };
@@ -140,7 +148,7 @@ export const monitoringCopy = {
   description:
     'Acecore offers a unique experience with 24/7 monitoring, ensuring that your solar panel system operates optimally day and night.',
   cta: {
-    label: 'View products',
+    label: 'Explore the Powercell',
     to: '/product',
   },
 };
@@ -171,9 +179,9 @@ export const monitoringCards = [
 
 export const cleanEnergyCopy = {
   eyebrow: 'Clean Energy',
-  title: 'Lighting Up a Cleaner Tomorrow',
+  title: 'Powering Up a Better Tomorrow',
   description:
-    'We believe in the power of solar energy to transform lives, reduce energy bills, and contribute to a cleaner planet.',
+    'We believe reliable energy has the power to transform lives, unlock endless possibilities, and build a cleaner future. We’re putting that power in your hands so you can live, create, and build without limits.',
   cta: {
     label: 'View products',
     to: '/product',
@@ -181,27 +189,7 @@ export const cleanEnergyCopy = {
 };
 
 export const cleanEnergyCards = [
-  {
-    id: 'high-efficiency',
-    icon: 'high-efficiency',
-    title: 'High Efficiency',
-    description:
-      'Acecore panels are designed to efficiently convert sunlight into electricity, ensuring maximum energy production from your solar system.',
-  },
-  {
-    id: 'independence',
-    icon: 'energy-independence',
-    title: 'Energy Independence',
-    description:
-      'Utilizing Acecore solar panels allows you to reduce your reliance on the grid, lower your energy bills, and gain greater energy independence.',
-  },
-  {
-    id: 'reliability',
-    icon: 'reliability',
-    title: 'Reliability',
-    description:
-      'These panels are known for their durability and long lifespan, providing a reliable source of clean energy for years to come.',
-  },
+
 ];
 
 export const advantageCopy = {
@@ -217,7 +205,7 @@ export const advantageCards = [
     icon: 'impact',
     title: 'Environmental Impact',
     description:
-      'By generating clean energy, the company reduces its carbon footprint, contributing to the fight against climate change and promoting a sustainable future.',
+      'By indigeneously manufacturing clean energy solutions, we help reduce carbon emissions contributing to the fight against climate change and a sustainable future.',
   },
   {
     id: 'technology',
@@ -225,7 +213,7 @@ export const advantageCards = [
     icon: 'technology',
     title: 'Our Innovative Technology',
     description:
-      'Our advanced application optimizes solar panel and inverter efficiency, tracks usage and battery life, enables remote control, and supports data-driven decision-making, ensuring top-notch performance.',
+      'Our AI powered software optimizes solar panel and energy efficiency, tracks usage and battery life, enables remote control, predicts weather changes, and supports data-driven decision-making, ensuring top-notch performance.',
   },
   {
     id: 'investment',
@@ -233,15 +221,15 @@ export const advantageCards = [
     icon: 'investment',
     title: 'Long-Term Investment',
     description:
-      'Our solar panel installations are a long-term investment that continues to deliver financial and environmental benefits for years to come.',
+      'Built to last, Acecore delivers reliable energy with durable battery technology, intelligent energy management, and long-term value for your home or business..',
   },
   {
     id: 'custom',
     number: '04',
     icon: 'custom',
-    title: 'Custom Solutions',
+    title: 'Flexible Solutions',
     description:
-      "Acecore's dedication to custom solutions means that your renewable energy system isn't just a product; it's a bespoke solution that aligns with your goals and values.",
+      "Acecore's dedication to custom solutions means that your renewable energy system isn't just a product; it's a bespoke solution that will always align with your goals and values.",
   },
   {
     id: 'savings',
@@ -249,7 +237,7 @@ export const advantageCards = [
     icon: 'savings',
     title: 'Cost Savings',
     description:
-      'Choosing solar panels and inverters from a renewable energy company can lead to significant long-term cost savings on electricity bills.',
+      ' By designing and building in Africa, we reduce import and distribution costs, allowing Acecore to deliver reliable energy at a more accessible price. Choosing the Aecore Powercell can lead to significant long-term cost savings on electricity bills.',
   },
   {
     id: 'backup',
@@ -257,7 +245,7 @@ export const advantageCards = [
     icon: 'backup',
     title: 'Reliable Backup',
     description:
-      'Our solar systems with efficient battery storage provide reliable backup power during grid outages, enhancing energy security.',
+      'The Powercell is built with Grade-A batteries for dependable performance, while the Powercore App tells you when and how to use your energy for the best results so you can stay powered without the guesswork.',
   },
 ];
 

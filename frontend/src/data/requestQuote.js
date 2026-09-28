@@ -2,7 +2,7 @@ export const requestQuoteCopy = {
   eyebrow: 'PRICING',
   title: 'Request a Powercell Quote',
   description:
-    'Compare PowerCell models and choose the system that fits your energy needs.',
+    'Compare Powercell models and choose the system that fits your energy needs.',
   disclaimer:
     '*Does not include VAT, delivery, installation, or other costs and fees. Final price will be provided by a Certified Installer.',
   disclaimerLinkLabel: 'Learn more about Powercell without Solar Panel',

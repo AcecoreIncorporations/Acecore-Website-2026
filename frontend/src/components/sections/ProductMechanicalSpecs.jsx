@@ -29,7 +29,7 @@ export default function ProductMechanicalSpecs() {
             <img
               className="product-mech-specs__diagram"
               src={specificationsImage}
-              alt="Exploded wireframe view of the Acecore PowerCell mechanical assembly"
+              alt="Exploded wireframe view of the Acecore Powercell mechanical assembly"
             />
           </div>
         </Reveal>

@@ -180,7 +180,7 @@ export default function RequestQuoteSection() {
   const validate = () => {
     const next = {};
 
-    if (!selectedPackageId) next.package = 'Select a PowerCell package.';
+    if (!selectedPackageId) next.package = 'Select a Powercell package.';
     if (!form.installationAddress.trim()) {
       next.installationAddress = 'Enter an installation address.';
     }
@@ -255,7 +255,7 @@ export default function RequestQuoteSection() {
           <div className="request-quote__primary">
             <Reveal className="request-quote__options-wrap" y={20}>
               <fieldset className="request-quote__options" id="quote-configuration">
-                <legend className="visually-hidden">Choose a PowerCell package</legend>
+                <legend className="visually-hidden">Choose a Powercell package</legend>
                 {quotePackages.map((item) => {
                   const selected = selectedPackageId === item.id;
                   return (

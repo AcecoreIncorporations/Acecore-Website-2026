@@ -11,7 +11,7 @@ export const aboutPrinciples = [
     index: '01',
     title: 'Innovation',
     description:
-      'Acecore pioneers renewable innovations, integrating state-of-the-art tech into solar, inverters, and storage for cutting-edge, efficient solutions.',
+      'Acecore pioneers clean energy innovations, integrating state-of-the-art tech into the clean energy sector for cutting-edge, efficient solutions.',
   },
   {
     id: 'sustainability',
@@ -23,27 +23,27 @@ export const aboutPrinciples = [
   {
     id: 'procurement',
     index: '03',
-    title: 'Energy Procurement Strategy',
+    title: 'Made By Africans',
     description:
-      'Acecore, trusted for reliability in renewable energy. Our durable solar panels and inverters ensure consistent, long-term performance and savings.',
+      'Acecore is committed to empowering African innovation and creating solutions that are designed and built by Africans for the rest of the wold.',
   },
 ];
 
 export const aboutWhoCopy = {
   title: 'Who is Acecore?',
   paragraphs: [
-    'Acecore is a renewable energy company that design, manufacture, install and maintain energy generation & energy storage systems for the next generation of African innovators.',
+    'Acecore is a clean energy company that indigeneously designs, manufactures, and deploys clean energy solutions for homes and businesses. Acecore has built the next generation of intelligent energy solutions, helping homes and businesses generate, store, and manage power with confidence and no uncertainty',
     'Acecore Inc is an engineering power generation establishment born out of the "light up Africa" Initiative.',
     'Acecore was founded to help solve the numerous energy problems ravaging Nigeria and Africa at large.',
-    'Acecore specializes in solar energy exploration, improvement and management.',
+    'Acecore specializes in intelligent energy exploration, improvement and management.',
   ],
 };
 
 export const aboutVisionCopy = {
   title: 'Our vision and mission',
   paragraphs: [
-    "We are on a mission to improve Africa's energy sector, provide Africa's next generation of innovators a foundation and a platform to keep innovating and help drive the world to a sustainable future.",
-    'Our vision is to be the most innovative sustainable energy company and also bring inspiration & Innovation to Africa.',
+    "Our mission is to democratize access to clean energy by building intelligent renewable energy systems that eliminate uncertainty and put people in control of how they generate, store, manage, and use power.",
+    'Our vision is to revolutionize the renewable energy sector in Africa and beyond by becoming Africa’s most trusted renewable energy technology company and indigenously making reliable, intelligent energy the standard rather than the exception.',
   ],
 };
 
@@ -85,5 +85,5 @@ export const aboutTeamCta = {
   title: 'The people powering Acecore',
   description: 'Meet the minds building reliable energy for the next million homes.',
   ctaLabel: 'Meet the team',
-  to: '/team',
+  // to: '/team', //  to be added when team page is ready
 };

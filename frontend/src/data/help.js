@@ -1,22 +1,22 @@
 export const helpHeroCopy = {
   eyebrow: 'HOW CAN WE HELP?',
-  title: 'Get the most out of your PowerCell.',
+  title: 'Get the most out of your Powercell.',
   description:
-    'Find guides, answers, and troubleshooting help for your PowerCell and PowerCore app.',
+    'Find guides, answers, and troubleshooting help for your Powercell and PowerCore app.',
   searchPlaceholder: 'Search products or topics...',
 };
 
 export const helpDownloads = [
   {
     id: 'user-manual',
-    label: 'PowerCell User Manual',
+    label: 'Powercell User Manual',
     description: 'Installation, setup, and operation guide (PDF).',
     href: '/docs/acecore-powercell-user-manual.pdf',
   },
 ];
 
 export const helpTopics = [
-  { id: 'powercell-app', label: 'Powercell App' },
+  { id: 'powercell-app', label: 'Powercore App' },
   { id: 'getting-started', label: 'Getting Started' },
   { id: 'dashboard', label: 'Dashboard' },
   { id: 'energy-monitoring', label: 'Energy Monitoring' },
@@ -54,16 +54,16 @@ function article(title, subtitle, intro, sectionA, sectionB) {
 
 export const helpArticles = {
   'powercell-app': article(
-    'Powercell App',
+    'Powercore App',
     'Control your energy. From anywhere.',
-    "The Powercore App gives you a clear view of your PowerCell and your home's energy system. Monitor performance, understand your energy usage, make smarter decisions, and control connected devices — all from one place.",
+    "The Powercore App gives you a clear view of your Powercell and your home's energy system. Monitor performance, understand your energy usage, make smarter decisions, and control connected devices — all from one place.",
     {
       heading: 'What you can do',
       items: [
         {
           title: 'Monitor your energy',
           description:
-            'See how your PowerCell is performing in real time. Track energy generation, consumption, battery levels, and system activity from your dashboard.',
+            'See how your Powercell is performing in real time. Track energy generation, consumption, battery levels, and system activity from your dashboard.',
         },
         {
           title: 'Understand your usage',
@@ -83,7 +83,7 @@ export const helpArticles = {
         {
           title: 'Control remotely',
           description:
-            'Manage supported PowerCell features and connected devices without being physically beside your system.',
+            'Manage supported Powercell features and connected devices without being physically beside your system.',
         },
       ],
     },
@@ -93,7 +93,7 @@ export const helpArticles = {
         {
           title: 'Dashboard',
           description:
-            'Your at-a-glance view of your PowerCell, energy flow, system status, and current performance.',
+            'Your at-a-glance view of your Powercell, energy flow, system status, and current performance.',
         },
         {
           title: 'Energy Monitoring',
@@ -125,15 +125,15 @@ export const helpArticles = {
 
   'getting-started': article(
     'Getting Started',
-    'Set up your PowerCell and Powercore App with confidence.',
-    'This guide walks you through unboxing, first connection, account setup, and the first checks that confirm your PowerCell is online and reporting correctly in the Powercore App.',
+    'Set up your Powercell and Powercore App with confidence.',
+    'This guide walks you through unboxing, first connection, account setup, and the first checks that confirm your Powercell is online and reporting correctly in the Powercore App.',
     {
       heading: 'Before you begin',
       items: [
         {
           title: 'Confirm package contents',
           description:
-            'Make sure you have your PowerCell unit, mounting hardware, communication accessories, and the quick-start card included with your system.',
+            'Make sure you have your Powercell unit, mounting hardware, communication accessories, and the quick-start card included with your system.',
         },
         {
           title: 'Prepare your network',
@@ -151,9 +151,9 @@ export const helpArticles = {
             'Use the email associated with your order when possible. This helps keep warranties, support tickets, and device ownership aligned.',
         },
         {
-          title: 'Keep your serial number nearby',
+          title: 'Keep your Powercell ID nearby',
           description:
-            'Your serial number is required for pairing, warranty registration, and support. It is usually printed on the unit and packaging.',
+            'Your Powercell number is required for pairing, warranty registration, and support.',
         },
       ],
     },
@@ -163,12 +163,12 @@ export const helpArticles = {
         {
           title: 'Power on the system',
           description:
-            'Follow the installer instructions to energize the PowerCell safely, then wait for the status indicators to stabilize.',
+            'Follow the installer instructions to energize the Powercell safely, then wait for the status indicators to stabilize.',
         },
         {
           title: 'Pair the device',
           description:
-            'In the Powercore App, choose Add Device and follow the prompts to discover and link your PowerCell to your account.',
+            'In the Powercore App, choose Add Device and follow the prompts to discover and link your Powercell to your account.',
         },
         {
           title: 'Verify live status',
@@ -197,14 +197,14 @@ export const helpArticles = {
   dashboard: article(
     'Dashboard',
     'Your system at a glance.',
-    'The Dashboard is the home screen of the Powercore App. It summarizes PowerCell health, energy flow, battery state, and recent activity so you can understand system status without digging through menus.',
+    'The Dashboard is the home screen of the Powercore App. It summarizes Powercell health, energy flow, battery state, and recent activity so you can understand system status without digging through menus.',
     {
       heading: 'What the dashboard shows',
       items: [
         {
           title: 'System status',
           description:
-            'See whether your PowerCell is online, charging, discharging, idle, or operating in backup mode.',
+            'See whether your Powercell is online, charging, discharging, idle, or operating in backup mode.',
         },
         {
           title: 'Battery overview',
@@ -244,7 +244,7 @@ export const helpArticles = {
         {
           title: 'Watch for stale data',
           description:
-            'If timestamps stop updating, refresh the app and confirm the PowerCell is still connected before assuming a hardware fault.',
+            'If timestamps stop updating, refresh the app and confirm the Powercell is still connected before assuming a hardware fault.',
         },
         {
           title: 'Compare to yesterday',
@@ -268,7 +268,7 @@ export const helpArticles = {
   'energy-monitoring': article(
     'Energy Monitoring',
     'Follow production, use, and storage in real time.',
-    'Energy Monitoring helps you see what your PowerCell and home are doing right now. Use it to verify performance during the day, during outages, and whenever you change operating modes.',
+    'Energy Monitoring helps you see what your Powercell and home are doing right now. Use it to verify performance during the day, during outages, and whenever you change operating modes.',
     {
       heading: 'Live monitoring essentials',
       items: [
@@ -285,7 +285,7 @@ export const helpArticles = {
         {
           title: 'Watch battery activity',
           description:
-            'Follow charge and discharge rates to understand whether the PowerCell is storing, supplying, or holding energy.',
+            'Follow charge and discharge rates to understand whether the Powercell is storing, supplying, or holding energy.',
         },
         {
           title: 'Confirm operating mode',
@@ -339,7 +339,7 @@ export const helpArticles = {
   'energy-analytics': article(
     'Energy Analytics',
     'Turn history into clearer decisions.',
-    'Energy Analytics helps you explore how your home and PowerCell have performed over time. Use historical views to find patterns, plan better usage, and evaluate whether your settings are delivering the results you want.',
+    'Energy Analytics helps you explore how your home and Powercell have performed over time. Use historical views to find patterns, plan better usage, and evaluate whether your settings are delivering the results you want.',
     {
       heading: 'What analytics can reveal',
       items: [
@@ -410,7 +410,7 @@ export const helpArticles = {
   'ai-recommendations': article(
     'AI Recommendations',
     'Smarter suggestions from your energy data.',
-    'AI Recommendations use your PowerCell activity and household patterns to highlight practical ways to store, use, and protect energy more effectively. Suggestions are guidance — you stay in control of every change.',
+    'AI Recommendations use your Powercell activity and household patterns to highlight practical ways to store, use, and protect energy more effectively. Suggestions are guidance — you stay in control of every change.',
     {
       heading: 'Types of recommendations',
       items: [
@@ -481,7 +481,7 @@ export const helpArticles = {
   'weather-intelligence': article(
     'Weather Intelligence',
     'Understand conditions that affect your energy system.',
-    'Weather Intelligence connects local condition insights to your PowerCell context so you can anticipate generation changes, prepare reserves, and understand why performance shifts on certain days.',
+    'Weather Intelligence connects local condition insights to your Powercell context so you can anticipate generation changes, prepare reserves, and understand why performance shifts on certain days.',
     {
       heading: 'Why weather matters',
       items: [
@@ -518,7 +518,7 @@ export const helpArticles = {
         {
           title: 'Check before major weather events',
           description:
-            'Open the view when storms or extreme temperatures are expected and confirm your PowerCell is online.',
+            'Open the view when storms or extreme temperatures are expected and confirm your Powercell is online.',
         },
         {
           title: 'Compare forecast to battery state',
@@ -552,7 +552,7 @@ export const helpArticles = {
   'remote-control': article(
     'Remote Control',
     'Manage supported features from anywhere.',
-    'Remote Control lets you adjust supported PowerCell functions and connected behaviours through the Powercore App. Use it to change modes, trigger allowed actions, and confirm that commands complete successfully.',
+    'Remote Control lets you adjust supported Powercell functions and connected behaviours through the Powercore App. Use it to change modes, trigger allowed actions, and confirm that commands complete successfully.',
     {
       heading: 'What you can control',
       items: [
@@ -622,15 +622,15 @@ export const helpArticles = {
 
   troubleshooting: article(
     'Troubleshooting',
-    'Resolve common PowerCell and app issues.',
-    'Use this troubleshooting guide when the Powercore App, connectivity, or PowerCell behaviour does not match expectations. Start with the simplest checks, then move toward connection, data, and control diagnostics.',
+    'Resolve common Powercell and app issues.',
+    'Use this troubleshooting guide when the Powercore App, connectivity, or Powercell behaviour does not match expectations. Start with the simplest checks, then move toward connection, data, and control diagnostics.',
     {
       heading: 'First checks',
       items: [
         {
           title: 'Confirm power and indicators',
           description:
-            'Verify the PowerCell is powered and that local status lights or displays match the condition reported in the app.',
+            'Verify the Powercell is powered and that local status lights or displays match the condition reported in the app.',
         },
         {
           title: 'Update the Powercore App',
@@ -693,8 +693,8 @@ export const helpArticles = {
 
   'connection-issues': article(
     'Connection Issues',
-    'Restore a stable link between app and PowerCell.',
-    'Connection issues appear when the Powercore App cannot reliably reach your PowerCell. These steps help you verify local network conditions, account pairing, and the communication path used by your system.',
+    'Restore a stable link between app and Powercell.',
+    'Connection issues appear when the Powercore App cannot reliably reach your Powercell. These steps help you verify local network conditions, account pairing, and the communication path used by your system.',
     {
       heading: 'Common connection symptoms',
       items: [
@@ -706,7 +706,7 @@ export const helpArticles = {
         {
           title: 'Pairing failures',
           description:
-            'The app cannot discover or complete linking during setup even though the PowerCell appears powered.',
+            'The app cannot discover or complete linking during setup even though the Powercell appears powered.',
         },
         {
           title: 'Commands time out',
@@ -741,7 +741,7 @@ export const helpArticles = {
         {
           title: 'Confirm credentials',
           description:
-            'If the network password changed, the PowerCell may need to be rejoined with updated credentials.',
+            'If the network password changed, the Powercell may need to be rejoined with updated credentials.',
         },
         {
           title: 'Re-pair only when needed',
@@ -751,7 +751,7 @@ export const helpArticles = {
         {
           title: 'Test from another phone',
           description:
-            'If another signed-in device connects cleanly, the issue may be local to one phone rather than the PowerCell.',
+            'If another signed-in device connects cleanly, the issue may be local to one phone rather than the Powercell.',
         },
         {
           title: 'Escalate persistent drops',
@@ -764,15 +764,15 @@ export const helpArticles = {
 
   'device-offline': article(
     'Device Offline',
-    'Bring your PowerCell back online.',
-    'An offline PowerCell means the Powercore App cannot currently verify live communication with the unit. Work through power, network, and account checks in order before assuming a hardware failure.',
+    'Bring your Powercell back online.',
+    'An offline Powercell means the Powercore App cannot currently verify live communication with the unit. Work through power, network, and account checks in order before assuming a hardware failure.',
     {
       heading: 'Immediate offline checks',
       items: [
         {
           title: 'Confirm the unit has power',
           description:
-            'Verify supply to the PowerCell and that local indicators are active. An unpowered unit cannot report online status.',
+            'Verify supply to the Powercell and that local indicators are active. An unpowered unit cannot report online status.',
         },
         {
           title: 'Check recent outages',
@@ -787,7 +787,7 @@ export const helpArticles = {
         {
           title: 'Inspect local network health',
           description:
-            'Confirm other household devices can reach the internet on the same network the PowerCell uses.',
+            'Confirm other household devices can reach the internet on the same network the Powercell uses.',
         },
         {
           title: 'Look for maintenance windows',
@@ -805,7 +805,7 @@ export const helpArticles = {
             'After restoring power or internet, give the system a short window to reappear before changing configuration.',
         },
         {
-          title: 'Restart the PowerCell if safe',
+          title: 'Restart the Powercell if safe',
           description:
             'Follow installer-approved restart steps only. Do not improvise hardware resets that could interrupt protected loads.',
         },
@@ -836,7 +836,7 @@ export const helpArticles = {
   'data-not-updating': article(
     'Data Not Updating',
     'Fix stale readings and frozen charts.',
-    'When battery levels, graphs, or timestamps stop moving, the PowerCell may still be online while reporting is delayed or interrupted. These steps help you distinguish app refresh problems from true data pipeline issues.',
+    'When battery levels, graphs, or timestamps stop moving, the Powercell may still be online while reporting is delayed or interrupted. These steps help you distinguish app refresh problems from true data pipeline issues.',
     {
       heading: 'Signs of stale data',
       items: [
@@ -907,7 +907,7 @@ export const helpArticles = {
   'remote-control-issues': article(
     'Remote Control Issues',
     'When commands fail or do not apply.',
-    'Remote Control Issues cover failed mode changes, unanswered commands, and settings that appear to save in the app but do not take effect on the PowerCell. Diagnose connectivity and confirmation behaviour before repeating actions.',
+    'Remote Control Issues cover failed mode changes, unanswered commands, and settings that appear to save in the app but do not take effect on the Powercell. Diagnose connectivity and confirmation behaviour before repeating actions.',
     {
       heading: 'Typical remote control failures',
       items: [
@@ -944,7 +944,7 @@ export const helpArticles = {
         {
           title: 'Verify online status first',
           description:
-            'Remote commands cannot apply reliably while the PowerCell is offline or reconnecting.',
+            'Remote commands cannot apply reliably while the Powercell is offline or reconnecting.',
         },
         {
           title: 'Send one command at a time',
@@ -978,7 +978,7 @@ export const helpArticles = {
   'account-login': article(
     'Account & Login',
     'Manage access to your Powercore App.',
-    'Your Acecore account links ownership, support history, and device control. Use this guide for sign-in problems, password recovery, shared household access, and keeping account details aligned with your PowerCell.',
+    'Your Acecore account links ownership, support history, and device control. Use this guide for sign-in problems, password recovery, shared household access, and keeping account details aligned with your Powercell.',
     {
       heading: 'Account essentials',
       items: [

@@ -1,4 +1,4 @@
-Acecore PowerCell User Manual
+Acecore Powercell User Manual
 
 Replace this file with the official PDF named:
 acecore-powercell-user-manual.pdf

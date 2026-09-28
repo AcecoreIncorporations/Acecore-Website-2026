@@ -4,7 +4,7 @@ import { isCheckoutReady } from '../lib/quoteSession';
 export const confirmationCopy = {
   title: 'Order confirmed',
   support:
-    'Your PowerCell order has been received. We’ll keep you updated as it moves through fulfillment.',
+    'Your Powercell order has been received. We’ll keep you updated as it moves through fulfillment.',
   orderLabel: 'ORDER',
   statusEyebrow: 'Current status',
   nextTitle: 'What happens next',
@@ -29,7 +29,7 @@ export const orderStatuses = {
   },
   preparing: {
     id: 'preparing',
-    label: 'Preparing your PowerCell',
+    label: 'Preparing your Powercell',
     description: 'Your unit is being prepared and checked before dispatch.',
     progress: 0.5,
     activeStep: 2,
@@ -44,7 +44,7 @@ export const orderStatuses = {
   delivered: {
     id: 'delivered',
     label: 'Delivered',
-    description: 'Your PowerCell has been delivered.',
+    description: 'Your Powercell has been delivered.',
     progress: 1,
     activeStep: 3,
   },
@@ -60,7 +60,7 @@ export const confirmationTimeline = [
   {
     id: 'preparing',
     number: '02',
-    title: 'Preparing your PowerCell',
+    title: 'Preparing your Powercell',
     description: 'Your unit will be prepared and checked before dispatch.',
   },
   {

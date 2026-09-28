@@ -151,7 +151,7 @@ export default function HomeAdvantage() {
           <img
             className="home-advantage__image"
             src={advantageImage}
-            alt="Modern home with Acecore solar panels and PowerCell energy storage at dusk"
+            alt="Modern home with Acecore solar panels and Powercell energy storage at dusk"
           />
         </Reveal>
       </div>

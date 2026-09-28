@@ -8,6 +8,7 @@ import RequestQuotePage from '../pages/RequestQuote/RequestQuotePage';
 import CheckoutPage from '../pages/Checkout/CheckoutPage';
 import OrderConfirmationPage from '../pages/Confirmation/OrderConfirmationPage';
 import MeetTeamPage from '../pages/MeetTeam/MeetTeamPage';
+import TermsPage from '../pages/Terms/TermsPage';
 import PageLayout from '../components/layout/PageLayout';
 import Container from '../components/ui/Container';
 
@@ -33,6 +34,7 @@ export default function AppRoutes() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/team" element={<MeetTeamPage />} />
       <Route path="/support" element={<SupportPage />} />
+      <Route path="/terms" element={<TermsPage />} />
       <Route path="/request-quote" element={<RequestQuotePage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
       <Route path="/order-confirmation" element={<OrderConfirmationPage />} />

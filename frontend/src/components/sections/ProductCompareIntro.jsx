@@ -1,5 +1,6 @@
 import Reveal from '../ui/Reveal';
 import { productCompareCopy } from '../../data/product';
+import boldSolutionImage from '../../assets/images/product/Boldsolution.png';
 
 export default function ProductCompareIntro() {
   return (
@@ -14,15 +15,11 @@ export default function ProductCompareIntro() {
         </Reveal>
 
         <Reveal className="product-compare-intro__visual" y={24} delay={0.12}>
-          <div
+          <img
             className="product-compare-intro__placeholder"
-            role="img"
-            aria-label="Compare models visual placeholder"
-          >
-            <span className="product-compare-intro__placeholder-label">
-              Compare models visual coming soon
-            </span>
-          </div>
+            src={boldSolutionImage}
+            alt="Boldsolution energy comparison visual"
+          />
         </Reveal>
       </div>
     </section>

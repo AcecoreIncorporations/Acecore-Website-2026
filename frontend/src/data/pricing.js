@@ -1,13 +1,13 @@
 export const pricingModes = [
   { id: 'solar', label: 'Solar Included' },
-  { id: 'powercell', label: 'PowerCell Only' },
+  { id: 'powercell', label: 'Powercell Only' },
 ];
 
 export const pricingCopy = {
   eyebrow: 'PRICING',
-  title: 'Choose the Right PowerCell for You.',
+  title: 'Choose the Right Powercell for You.',
   description:
-    'Compare PowerCell models and choose the system that fits your energy needs.',
+    'Compare Powercell models and choose the system that fits your energy needs.',
   cta: 'Get Your Powercell',
   instalmentLabel: 'Installation payment',
 };
@@ -24,8 +24,8 @@ export const pricingPlans = [
     name: 'POWERCELL PRIME',
     amount: 4_400_000,
     prices: {
-      solar: '₦4.4M',
-      powercell: '₦4.4M',
+      solar: '₦4,000,000',
+      powercell: '₦3,000,000',
     },
     specs: ['3.5kW Output', '5kWh Capacity'],
     instalments: sharedInstalments,
@@ -35,8 +35,8 @@ export const pricingPlans = [
     name: 'POWERCELL PRIME+',
     amount: 8_900_000,
     prices: {
-      solar: '₦8.9M',
-      powercell: '₦8.9M',
+      solar: '₦7,500,000',
+      powercell: '₦5,500,000',
     },
     specs: ['3.5kW Output', '5kWh Capacity'],
     instalments: sharedInstalments,
@@ -46,8 +46,8 @@ export const pricingPlans = [
     name: 'POWERCELL ULTRA',
     amount: 15_500_000,
     prices: {
-      solar: '₦15.5M',
-      powercell: '₦15.5M',
+      solar: '₦12,000,000',
+      powercell: '₦10,000,000',
     },
     specs: ['3.5kW Output', '5kWh Capacity'],
     instalments: sharedInstalments,

@@ -1,7 +1,7 @@
 import Reveal from '../ui/Reveal';
 import { productHeroCopy, productHeroStats } from '../../data/product';
 import markImage from '../../assets/images/home/5kVA.svg';
-import powercellImage from '../../assets/images/product/powercell2.png';
+import powercellImage from '../../assets/images/product/powercellB.png';
 import outputIcon from '../../assets/icons/product/power-output.svg';
 import capacityIcon from '../../assets/icons/product/user-capacity.svg';
 import lifeIcon from '../../assets/icons/product/design-life.svg';
@@ -54,7 +54,7 @@ export default function ProductHero() {
               <img
                 className="product-hero__product"
                 src={powercellImage}
-                alt="Acecore PowerCell energy storage unit"
+                alt="Acecore Powercell energy storage unit"
               />
             </div>
           </div>

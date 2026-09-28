@@ -3,9 +3,9 @@ export const footerGroups = [
     title: 'Company',
     links: [
       { label: 'About', to: '/about' },
-      { label: 'Team', to: '/team' },
-      { label: 'Terms', to: '/about' },
-      { label: 'Privacy', to: '/about' },
+      // { label: 'Team', to: '/team' },
+      // { label: 'Term of Use', href: '/docs/Acecore Term of use.pdf'  },
+     
     ],
   },
   {
@@ -13,9 +13,9 @@ export const footerGroups = [
     links: [
       { label: 'Problems', to: '/product' },
       { label: 'Solutions', to: '/product' },
-      { label: 'Solar panels', to: '/product' },
-      { label: 'The powercore', to: '/product' },
-      { label: 'The powercell', to: '/product' },
+      { label: 'Support', to: { pathname: '/support', hash: '#help-center' } },
+      { label: 'Powercore App', to: { pathname: '/product', hash: '#productPowercoreApp' } },
+      { label: 'The Powercell', to: '/product' },
     ],
   },
   {
@@ -24,9 +24,8 @@ export const footerGroups = [
       { label: 'Homepage', to: '/' },
       { label: 'Product', to: '/product' },
       { label: 'Pricing', to: '/pricing' },
-      { label: 'Our services', to: '/product' },
       { label: 'About us', to: '/about' },
-      { label: 'Team', to: '/team' },
+      // { label: 'Team', to: '/team' },  //this is commented out because the team page is not yet ready
     ],
   },
   {
@@ -44,6 +43,7 @@ export const footerGroups = [
       { label: 'User Manual (PDF)', href: '/docs/acecore-powercell-user-manual.pdf' },
       { label: 'Apple Store', href: '#' },
       { label: 'Google Play Store', href: '#' },
+      { label: 'Term of Use', href: '/docs/Acecore Term of use.pdf' }
     ],
   },
 ];

@@ -31,7 +31,7 @@ export default function CompleteOrder({ view }) {
   const validate = () => {
     const next = {};
 
-    if (!view.packageId) next.configuration = 'Select a PowerCell configuration.';
+    if (!view.packageId) next.configuration = 'Select a Powercell configuration.';
     if (!view.address.trim()) next.delivery = 'Add a delivery address.';
     if (!email.trim()) next.email = 'Enter an email for your receipt.';
     else if (!isValidEmail(email)) next.email = 'Enter a valid email address.';

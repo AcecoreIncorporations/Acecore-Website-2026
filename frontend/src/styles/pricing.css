@@ -159,7 +159,7 @@
   font-size: clamp(2.4rem, 4vw, 3.15rem);
   font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.1rem;
   white-space: nowrap;
 }
 

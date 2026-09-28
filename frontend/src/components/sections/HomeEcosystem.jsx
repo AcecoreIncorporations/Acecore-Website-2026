@@ -9,10 +9,10 @@ import googlePlayLogo from '../../assets/icons/home/GooglePlay-logo.svg';
 
 const copy = {
   description:
-    'Discover intelligent energy solutions designed to power homes and businesses with reliable backup, clean energy, and complete control.',
+    'We are building intelligent energy solutions designed to power homes and businesses with reliable backup, clean energy, and complete control.',
   primary: {
     label: 'Get your power cell',
-    to: '/product',
+    to: '/pricing',
   },
   secondary: {
     label: 'Download app',
@@ -34,9 +34,9 @@ export default function HomeEcosystem() {
 
             <div className="home-ecosystem__content">
               <h2 id="home-ecosystem-title" className="home-ecosystem__title">
-                Discover the
+               No Uncertainty
                 <br />
-                <span>Acecore</span> Ecosystem.
+                <span>Just</span> Control
               </h2>
               <p className="home-ecosystem__description">{copy.description}</p>
               <div className="home-ecosystem__actions">

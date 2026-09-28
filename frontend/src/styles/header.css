@@ -511,7 +511,7 @@
   object-position: 70% center;
 }
 
-/* iPad / tablet: keep the house + PowerCell (far right in the asset) in frame */
+/* iPad / tablet: keep the house + Powercell (far right in the asset) in frame */
 @media (min-width: 768px) and (max-width: 1279px) {
   .home-hero__image {
     object-position: 92% center;
@@ -562,6 +562,12 @@
   gap: 1rem;
   width: min(100%, 48rem);
   padding-top: clamp(3.5rem, 12vh, 8.5rem);
+}
+
+@media (max-width: 767px) {
+  .home-hero__copy {
+    padding-top: clamp(3.5rem, 2vh, 8.5rem);
+  }
 }
 
 .home-hero__title {
@@ -788,9 +794,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.75rem 1rem;
-  padding-top: clamp(2.5rem, 5vw, 3.75rem);
+  /* padding-top: clamp(2.5rem, 5vw, 3.75rem); */
   width: 100%;
   max-width: 100%;
+}
+
+.stats_title{
+  /* color: red; */
+  padding-top: clamp(2.5rem, 5vw, 3.75rem);
 }
 
 .stat {
@@ -1174,7 +1185,7 @@
   );
 }
 
-/* Long PowerCell: top sits in the faded base of 5kVA, body extends down */
+/* Long Powercell: top sits in the faded base of 5kVA, body extends down */
 .home-storage__product {
   position: relative;
   z-index: 2;
@@ -1470,8 +1481,15 @@
   .home-feature__accordion {
     display: none;
   }
+
+
 }
 
+@media (max-width: 768px) {
+  .home-feature__card-description {
+  margin: 0px 20px 20px 20px;
+}
+}
 
 /* —— Home advantage carousel —— */
 
@@ -1703,13 +1721,13 @@
   display: grid;
   place-items: center;
   width: 100%;
-  max-width: 11.5rem;
+  max-width: 14rem;
 }
 
 .home-recognition__logo img {
   width: 100%;
   height: auto;
-  max-height: 2.35rem;
+  max-height: 3.25rem;
   object-fit: contain;
 }
 
@@ -1725,14 +1743,28 @@
 .home-recognition__marquee-track {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   width: max-content;
   animation: home-recognition-marquee 28s linear infinite;
 }
 
 .home-recognition__marquee .home-recognition__logo {
   flex: 0 0 auto;
-  width: 9.5rem;
+  width: 11.5rem;
+}
+
+@media (max-width: 767px) {
+  .home-recognition__grid {
+    gap: 1rem 0.75rem;
+  }
+
+  .home-recognition__logo img[src*="Meta.png"],
+  .home-recognition__logo img[src*="ost.png"],
+  .home-recognition__logo img[src*="tes.png"],
+  .home-recognition__logo img[src*="mit.png"],
+  .home-recognition__logo img[src*="par.png"] {
+    max-height: 5rem;
+  }
 }
 
 @keyframes home-recognition-marquee {
@@ -1835,6 +1867,12 @@
   line-height: 1.55;
 }
 
+.home-support__accordion .accordion__panel .faq-support-link {
+  color: #01937c;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 /* —— Home ecosystem CTA —— */
 
 .home-ecosystem {
@@ -1877,7 +1915,7 @@
 .home-ecosystem__title {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(2rem, 7vw, 2.75rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.04em;

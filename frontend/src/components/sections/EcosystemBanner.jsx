@@ -9,11 +9,11 @@ export default function EcosystemBanner() {
       <Container>
         <SectionHeader
           title={<span id="ecosystem-heading">Discover the Acecore Ecosystem.</span>}
-          description="Explore PowerCell, intelligent monitoring and the Acecore application — built for reliable clean energy."
+          description="Explore Powercell, intelligent monitoring and the Acecore application — built for reliable clean energy."
         />
         <div className="ecosystem-banner__actions">
           <Button as={Link} to="/product">
-            Explore PowerCell
+            Explore Powercell
           </Button>
           <Button as="a" href="#" variant="secondary">
             Download the app

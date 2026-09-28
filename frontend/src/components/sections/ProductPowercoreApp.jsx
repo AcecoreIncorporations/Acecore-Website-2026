@@ -66,6 +66,7 @@ export default function ProductPowercoreApp() {
 
   return (
     <section
+      id="productPowercoreApp"
       className="powercore-app"
       aria-labelledby="powercore-app-title"
     >
@@ -93,7 +94,7 @@ export default function ProductPowercoreApp() {
               src={phoneImage}
               width={437}
               height={901}
-              alt="Acecore PowerCore app on a phone showing PowerCell status, battery level, and controls"
+              alt="Acecore PowerCore app on a phone showing Powercell status, battery level, and controls"
             />
           </div>
 

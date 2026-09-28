@@ -1,8 +1,8 @@
 export const comparisonCopy = {
   eyebrow: 'COMPARE MODELS',
-  title: 'Find the Right PowerCell for Your Needs.',
+  title: 'Find the Right Powercell for Your Needs.',
   description:
-    'Compare PowerCell models to find the ideal balance of capacity, performance, and value for your home or business.',
+    'Compare Powercell models to find the ideal balance of capacity, performance, and value for your home or business.',
   featureHeader: 'Feature Specifications',
   chooseLabel: 'Choose',
 };
@@ -79,49 +79,50 @@ export const comparisonSpecifications = [
   {
     id: 'start-capacity',
     label: 'Load start capacity',
-    values: { price: '-', primePlus: '-', ultra: '98 - 118 LRA' },
+    values: { price: '98 - 118 LRA', primePlus: '98 - 118 LRA', ultra: '98 - 118 LRA' },
   },
   {
     id: 'overcurrent',
     label: 'Overcurrent protection device',
-    values: { price: '-', primePlus: '-', ultra: '50A breaker' },
+    values: { price: '50A breaker', primePlus: '50A breaker', ultra: '50A breaker' },
   },
   {
     id: 'power-factor',
-    label: 'Power factor ratings',
-    values: { price: '-', primePlus: '-', ultra: '±0.9 to 0.9' },
+    label: 'Output Power factor ratings',
+    values: { price: '±0.9 to 0.9', primePlus: '±0.9 to 0.9', ultra: '±0.9 to 0.9' },
   },
   {
     id: 'max-input-voltage',
-    label: 'Maximum input voltage',
-    values: { price: '-', primePlus: '-', ultra: '600 VDC' },
+    label: 'PV Maximum input voltage',
+    values: { price: '600 VDC', primePlus: '600 VDC', ultra: '600 VDC' },
   },
   {
     id: 'input-voltage-range',
-    label: 'Input Voltage Range',
-    values: { price: '-', primePlus: '-', ultra: '60 - 550 VDC' },
+    label: 'PV DC Input Voltage Range',
+    values: { price: '60 - 550 VDC', primePlus: '60 - 550 VDC', ultra: '60 - 550 VDC' },
   },
+  
   {
     id: 'dc-ac-ratio',
-    label: 'Max DC/AC ratio',
-    values: { price: '-', primePlus: '-', ultra: '1.7' },
+    label: 'Allowable DC/AC ratio',
+    values: { price: '1.7A', primePlus: '1.7A', ultra: '1.7A' },
   },
   {
     id: 'fault-current',
     label: 'Maximum supply fault current',
-    values: { price: '-', primePlus: '-', ultra: '60A' },
+    values: { price: '60A', primePlus: '60A', ultra: '60A' },
   },
   {
     id: 'round-trip',
     label: 'Round trip efficiency',
-    values: { price: '-', primePlus: '-', ultra: '90%' },
+    values: { price: '90%', primePlus: '90%', ultra: '90%' },
   },
   {
     id: 'cec-efficiency',
-    label: 'Generation CEC efficiency',
+    label: 'Solar Generation GEC efficiency',
     values: {
-      price: '-',
-      primePlus: '-',
+      price: '97.5% at 208 V\n98% at 240 V',
+      primePlus: '97.5% at 208 V\n98% at 240 V',
       ultra: '97.5% at 208 V\n98% at 240 V',
     },
   },
@@ -129,37 +130,32 @@ export const comparisonSpecifications = [
     id: 'user-interface',
     label: 'User interface',
     values: {
-      price: '-',
-      primePlus: '-',
-      ultra: 'Acecore powercore mobile application',
+      price: 'Powercore mobile App',
+      primePlus: 'Powercore mobile App',
+      ultra: 'Powercore mobile App',
     },
   },
   {
     id: 'connectivity',
     label: 'Internet connectivity',
-    values: { price: '-', primePlus: '-', ultra: 'Wi-Fi' },
+    values: { price: 'Wi-Fi', primePlus: 'Wi-Fi', ultra: 'Wi-Fi' },
   },
   {
     id: 'cooling',
     label: 'Cooling',
-    values: { price: '-', primePlus: '-', ultra: 'Hybrid cooling system' },
+    values: { price: 'Hybrid Cooling system', primePlus: 'Hybrid Cooling system', ultra: 'Hybrid cooling system' },
   },
   {
     id: 'protections',
     label: 'Protections',
     values: {
-      price: '-',
-      primePlus: '-',
+      price: 'Integrated arc circuit interrupter (AFCI), PV rapid shutdown',
+      primePlus: 'Integrated arc circuit interrupter (AFCI), PV rapid shutdown',
       ultra:
         'Integrated arc circuit interrupter (AFCI), PV rapid shutdown, fire suppression system',
     },
   },
-  {
-    id: 'warranty',
-    label: 'Warranty',
-    values: { price: '-', primePlus: '-', ultra: '2 Years' },
-  },
-  {
+    {
     id: 'mppt-imp',
     label: 'Maximum current per MPPT (Imp)',
     values: { price: '30A', primePlus: '50A', ultra: '80A' },
@@ -168,6 +164,11 @@ export const comparisonSpecifications = [
     id: 'mppt-isc',
     label: 'Maximum short circuit current per MPPT (Isc)',
     values: { price: '35A', primePlus: '54A', ultra: '54A' },
+  },
+  {
+    id: 'warranty',
+    label: 'Warranty',
+    values: { price: '1 Year', primePlus: '1 Year', ultra: '1' },
   },
 ];
 

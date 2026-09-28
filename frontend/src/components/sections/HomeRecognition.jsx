@@ -1,17 +1,39 @@
 import Reveal from '../ui/Reveal';
 import { recognitionCopy, recognitionLogos } from '../../data/home';
-import recognitionLogo from '../../assets/logos/recognition.svg';
+import acecoreWhiteLogo from '../../assets/logos/acecore-white.png';
+import antLogo from '../../assets/logos/Ant.png';
+import metaLogo from '../../assets/logos/Meta.png';
+import mitLogo from '../../assets/logos/mit.png';
+import nasLogo from '../../assets/logos/nas.png';
+import ostLogo from '../../assets/logos/ost.png';
+import parLogo from '../../assets/logos/par.png';
+import setLogo from '../../assets/logos/SET.png';
+import solLogo from '../../assets/logos/sol.png';
+import tesLogo from '../../assets/logos/tes.png';
 
-function LogoItem({ label }) {
+const recognitionAssets = [
+  acecoreWhiteLogo,
+  antLogo,
+  mitLogo,
+  metaLogo,
+  nasLogo,
+  ostLogo,
+  parLogo,
+  setLogo,
+  solLogo,
+  tesLogo,
+];
+
+function LogoItem({ label, src }) {
   return (
     <li className="home-recognition__logo">
-      <img src={recognitionLogo} alt={label} />
+      <img src={src} alt={label} />
     </li>
   );
 }
 
 export default function HomeRecognition() {
-  const loopLogos = [...recognitionLogos, ...recognitionLogos];
+  const loopLogos = [...recognitionAssets, ...recognitionAssets];
 
   return (
     <section className="home-recognition" aria-labelledby="home-recognition-title">
@@ -26,8 +48,12 @@ export default function HomeRecognition() {
 
         <Reveal className="home-recognition__grid-wrap" y={24}>
           <ul className="home-recognition__grid" aria-label="Recognition partners">
-            {recognitionLogos.map((logo) => (
-              <LogoItem key={logo.id} label={logo.label} />
+            {recognitionLogos.map((logo, index) => (
+              <LogoItem
+                key={logo.id}
+                label={logo.label}
+                src={recognitionAssets[index % recognitionAssets.length]}
+              />
             ))}
           </ul>
         </Reveal>
@@ -35,9 +61,9 @@ export default function HomeRecognition() {
 
       <div className="home-recognition__marquee" aria-hidden="true">
         <div className="home-recognition__marquee-track">
-          {loopLogos.map((logo, index) => (
-            <span className="home-recognition__logo" key={`${logo.id}-${index}`}>
-              <img src={recognitionLogo} alt="" />
+          {loopLogos.map((src, index) => (
+            <span className="home-recognition__logo" key={`${src}-${index}`}>
+              <img src={src} alt="" />
             </span>
           ))}
         </div>

@@ -71,6 +71,7 @@ export default function HomeFeatureBlock({
             {copy.title}
           </h2>
           <p className="home-section-header__description">{copy.description}</p>
+
           {copy.cta ? (
             <div className="home-feature__cta">
               <Button as={NavLink} to={copy.cta.to} variant="brand">

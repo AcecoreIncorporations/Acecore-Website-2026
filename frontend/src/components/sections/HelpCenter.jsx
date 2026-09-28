@@ -221,7 +221,7 @@ export default function HelpCenter() {
     next?.id === 'getting-started' ? 'Getting started' : next?.label;
 
   return (
-    <section className="help-center" aria-labelledby="help-center-title">
+    <section id="help-center" className="help-center" aria-labelledby="help-center-title">
       <div className="help-center__shell">
         <Reveal className="help-center__hero">
           <p className="help-center__eyebrow">{helpHeroCopy.eyebrow}</p>

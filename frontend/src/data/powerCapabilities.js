@@ -2,13 +2,13 @@ export const powerCapabilitiesCopy = {
   eyebrow: 'WHAT THEY CAN POWER',
   title: 'Real energy for real life.',
   description:
-    'From everyday essentials to high-demand appliances, see what each PowerCell can carry and keep running.',
+    'From everyday essentials to high-demand appliances, see what each Powercell can carry and keep running.',
 };
 
 export const powerCapabilityModels = [
   {
     id: 'powercell',
-    name: 'PowerCell',
+    name: 'Powercell Prime',
     description: 'Reliable backup for your everyday essentials.',
     accent: 'brand',
     appliances: [
@@ -24,7 +24,7 @@ export const powerCapabilityModels = [
   },
   {
     id: 'powercell-prime',
-    name: 'PowerCell Prime',
+    name: 'Powercell Prime+',
     description: 'More power for a more connected home.',
     accent: 'brand',
     appliances: [
@@ -41,7 +41,7 @@ export const powerCapabilityModels = [
   },
   {
     id: 'powercell-prime-plus',
-    name: 'PowerCell Prime Plus',
+    name: 'Powercell Ultra',
     description: 'Our highest capacity for complete peace of mind.',
     accent: 'accent',
     appliances: [

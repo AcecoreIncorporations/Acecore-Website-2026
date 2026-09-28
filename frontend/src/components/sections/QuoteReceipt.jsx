@@ -36,7 +36,7 @@ export default function QuoteReceipt({ form, packageItem, quotationNumber }) {
       packageItem.description ||
       (form.hasSolar === 'yes'
         ? 'Includes solar configuration as selected'
-        : 'PowerCell package as selected'),
+        : 'Powercell package as selected'),
     price: packageItem.price,
     qty: '1',
     total: packageItem.price,

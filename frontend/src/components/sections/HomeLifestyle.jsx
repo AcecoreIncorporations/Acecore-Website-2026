@@ -45,7 +45,7 @@ export default function HomeLifestyle() {
           <img
             className="home-lifestyle__image"
             src={lifestylePoster}
-            alt="Acecore PowerCell installed in a modern living room beside a fireplace"
+            alt="Acecore Powercell installed in a modern living room beside a fireplace"
             width={2400}
             height={1350}
             loading="lazy"
@@ -60,7 +60,7 @@ export default function HomeLifestyle() {
             playsInline
             preload={inView ? 'auto' : 'none'}
             controls={false}
-            aria-label="Acecore PowerCell in a modern living room"
+            aria-label="Acecore Powercell in a modern living room"
           >
             {inView ? <source src={LIFESTYLE_VIDEO_SRC} type="video/mp4" /> : null}
           </video>

@@ -15,9 +15,17 @@ export const supportChannels = [
   },
   {
     id: 'whatsapp',
-    label: 'PHONE/WHATSAPP',
+    label: 'WhatsApp',
     value: '+234 901 529 4724',
     href: 'https://wa.me/2349015294724',
+    external: true,
+  },
+
+   {
+    id: 'whatsapp',
+    label: 'PHONE',
+    value: '+234 706 757 9254',
+    // href: 'https://wa.me/2349015294724',
     external: true,
   },
 ];

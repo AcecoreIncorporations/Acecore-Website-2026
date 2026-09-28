@@ -42,7 +42,7 @@ export default function QuoteLifestyleMedia({ className = '' }) {
         <img
           className="request-quote__image"
           src={previewPoster}
-          alt="Acecore PowerCell installed in a modern living room"
+          alt="Acecore Powercell installed in a modern living room"
           width={1600}
           height={900}
           loading="lazy"
@@ -57,7 +57,7 @@ export default function QuoteLifestyleMedia({ className = '' }) {
           playsInline
           preload={inView ? 'auto' : 'none'}
           controls={false}
-          aria-label="Acecore PowerCell in a modern living room"
+          aria-label="Acecore Powercell in a modern living room"
         >
           {inView ? (
             <source src={requestQuoteCopy.videoSrc} type="video/mp4" />

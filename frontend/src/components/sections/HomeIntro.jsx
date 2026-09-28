@@ -1,6 +1,6 @@
 import Reveal from '../ui/Reveal';
 import ImpactAnimatedStat from '../ui/ImpactAnimatedStat';
-import { introCopy, introStats } from '../../data/home';
+import { introCopy, introStats, introCopy3 } from '../../data/home';
 
 export default function HomeIntro() {
   return (
@@ -17,8 +17,13 @@ export default function HomeIntro() {
           </h2>
         </Reveal>
 
+ 
+<Reveal>
+          <p className="home-intro__eyebrow stats_title">{introCopy3.eyebrow}</p>
+        </Reveal>
         <div className="home-intro__stats">
           {introStats.map((stat, index) => (
+            
             <Reveal key={stat.id} delay={0.22 + index * 0.14} y={20}>
               <ImpactAnimatedStat
                 target={stat.target}
@@ -31,6 +36,8 @@ export default function HomeIntro() {
             </Reveal>
           ))}
         </div>
+        
+        
       </div>
     </section>
   );

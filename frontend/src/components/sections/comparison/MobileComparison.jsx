@@ -21,7 +21,7 @@ export default function MobileComparison() {
       <div
         className="comparison-mobile__tabs"
         role="tablist"
-        aria-label="PowerCell models"
+        aria-label="Powercell models"
       >
         {comparisonProducts.map((product) => {
           const isActive = product.id === selected.id;

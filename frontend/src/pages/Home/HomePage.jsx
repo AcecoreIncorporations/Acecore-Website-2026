@@ -21,9 +21,9 @@ export default function HomePage() {
       <HomeProblem />
       <HomeSolution />
       <HomeStorage />
+      <HomeAdvantage />
       <HomeMonitoring />
       <HomeCleanEnergy />
-      <HomeAdvantage />
       <HomeRecognition />
       <HomeSupport />
       <HomeEcosystem />

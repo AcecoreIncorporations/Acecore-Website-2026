@@ -32,8 +32,13 @@ function TeamMemberCard({ member }) {
 }
 
 function TeamGroupSection({ group }) {
+  const isLeadership = group.id === 'leadership';
+
   return (
-    <section className="meet-team__group" aria-labelledby={`meet-team-${group.id}-title`}>
+    <section
+      className={`meet-team__group${isLeadership ? ' meet-team__group--leadership' : ''}`}
+      aria-labelledby={`meet-team-${group.id}-title`}
+    >
       <Reveal className="meet-team__group-header">
         <p className="meet-team__eyebrow">{teamPageCopy.eyebrow}</p>
         <h2 id={`meet-team-${group.id}-title`} className="meet-team__group-title">

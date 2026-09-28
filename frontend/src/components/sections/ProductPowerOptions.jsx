@@ -17,7 +17,7 @@ export default function ProductPowerOptions() {
     const centerArtwork = () => {
       const maxScroll = frame.scrollWidth - frame.clientWidth;
       if (maxScroll <= 0) return;
-      // Start on the center-left / PowerCell area of the house
+      // Start on the center-left / Powercell area of the house
       frame.scrollLeft = maxScroll * 0.28;
     };
 
@@ -54,7 +54,7 @@ export default function ProductPowerOptions() {
               src={powerOptsImage}
               width={1430}
               height={1156}
-              alt="Diagram showing a PowerCell supplying household appliances including air conditioner, refrigerator, washing machine, lighting, television, laptop and router."
+              alt="Diagram showing a Powercell supplying household appliances including air conditioner, refrigerator, washing machine, lighting, television, laptop and router."
             />
           </div>
         </Reveal>

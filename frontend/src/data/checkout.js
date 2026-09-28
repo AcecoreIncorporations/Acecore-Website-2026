@@ -32,10 +32,10 @@ export const checkoutCopy = {
   policyHref: '/about',
   policyAfter: '.',
   backToQuote: 'Back to quote',
-  emptyTitle: 'No PowerCell configuration found.',
-  emptyDescription: 'Configure a PowerCell to continue to checkout.',
+  emptyTitle: 'No Powercell configuration found.',
+  emptyDescription: 'Configure a Powercell to continue to checkout.',
   emptyPricing: 'Back to Pricing',
-  emptyConfigure: 'Configure your PowerCell',
+  emptyConfigure: 'Configure your Powercell',
   pendingMessage: 'Checkout UI complete. Payment processing is not connected yet.',
 };
 
@@ -53,7 +53,7 @@ export const checkoutPaymentMethod = {
 
 function displayProductName(planName) {
   return String(planName || '')
-    .replace(/^POWERCELL\s+/i, 'PowerCell ')
+    .replace(/^POWERCELL\s+/i, 'Powercell ')
     .replace(/\bPRIME\+/i, 'Prime+')
     .replace(/\bPRIME\b/i, 'Prime')
     .replace(/\bULTRA\b/i, 'Ultra');

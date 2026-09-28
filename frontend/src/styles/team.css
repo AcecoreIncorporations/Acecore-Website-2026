@@ -81,6 +81,10 @@
   line-height: 1.45;
 }
 
+.meet-team__group--leadership .meet-team__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .meet-team__grid {
   list-style: none;
   margin: 2.15rem 0 0;
