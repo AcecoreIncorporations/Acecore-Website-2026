@@ -1,0 +1,103 @@
+{
+  "modes": [
+    {
+      "id": "solar",
+      "label": "Solar Included"
+    },
+    {
+      "id": "powercell",
+      "label": "Powercell Only"
+    }
+  ],
+  "copy": {
+    "eyebrow": "PRICING",
+    "title": "Choose the Right Powercell for You.",
+    "description": "Compare Powercell models and choose the system that fits your energy needs.",
+    "cta": "Get Your Powercell",
+    "instalmentLabel": "Installation payment"
+  },
+  "plans": [
+    {
+      "id": "prime",
+      "name": "POWERCELL PRIME",
+      "amount": 4400000,
+      "prices": {
+        "solar": "₦4,000,000",
+        "powercell": "₦3,000,000"
+      },
+      "specs": [
+        "3.5kW Output",
+        "5kWh Capacity"
+      ],
+      "instalments": [
+        {
+          "label": "3 Months (+7% interest)",
+          "amount": "₦636,700"
+        },
+        {
+          "label": "4 Months (+10% interest)",
+          "amount": "₦477,500"
+        },
+        {
+          "label": "5 Months (+13% interest)",
+          "amount": "₦382,000"
+        }
+      ]
+    },
+    {
+      "id": "prime-plus",
+      "name": "POWERCELL PRIME+",
+      "amount": 8900000,
+      "prices": {
+        "solar": "₦7,500,000",
+        "powercell": "₦5,500,000"
+      },
+      "specs": [
+        "3.5kW Output",
+        "5kWh Capacity"
+      ],
+      "instalments": [
+        {
+          "label": "3 Months (+7% interest)",
+          "amount": "₦636,700"
+        },
+        {
+          "label": "4 Months (+10% interest)",
+          "amount": "₦477,500"
+        },
+        {
+          "label": "5 Months (+13% interest)",
+          "amount": "₦382,000"
+        }
+      ]
+    },
+    {
+      "id": "ultra",
+      "name": "POWERCELL ULTRA",
+      "amount": 15500000,
+      "prices": {
+        "solar": "₦12,000,000",
+        "powercell": "₦10,000,000"
+      },
+      "specs": [
+        "3.5kW Output",
+        "5kWh Capacity"
+      ],
+      "instalments": [
+        {
+          "label": "3 Months (+7% interest)",
+          "amount": "₦636,700"
+        },
+        {
+          "label": "4 Months (+10% interest)",
+          "amount": "₦477,500"
+        },
+        {
+          "label": "5 Months (+13% interest)",
+          "amount": "₦382,000"
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-01T12:00:00.000Z"
+}

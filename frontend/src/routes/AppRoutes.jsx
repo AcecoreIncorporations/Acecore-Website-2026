@@ -11,10 +11,13 @@ import MeetTeamPage from '../pages/MeetTeam/MeetTeamPage';
 import TermsPage from '../pages/Terms/TermsPage';
 import PageLayout from '../components/layout/PageLayout';
 import Container from '../components/ui/Container';
+import SEO from '../components/common/SEO';
+import { seoPages } from '../data/seoData';
 
 function NotFoundPage() {
   return (
     <PageLayout>
+      <SEO {...seoPages.notFound} />
       <section className="page-hero">
         <Container>
           <h1>Page not found</h1>

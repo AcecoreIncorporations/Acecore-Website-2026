@@ -95,6 +95,8 @@ export default function ProductPowercoreApp() {
               width={437}
               height={901}
               alt="Acecore PowerCore app on a phone showing Powercell status, battery level, and controls"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

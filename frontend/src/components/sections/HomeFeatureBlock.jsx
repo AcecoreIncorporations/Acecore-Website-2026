@@ -82,14 +82,20 @@ export default function HomeFeatureBlock({
         </Reveal>
 
         <Reveal className="home-feature__media" y={32}>
-          <img className="home-feature__image" src={image} alt={imageAlt} />
+          <img
+            className="home-feature__image"
+            src={image}
+            alt={imageAlt}
+            loading="lazy"
+            decoding="async"
+          />
         </Reveal>
 
         <div className="home-feature__cards">
           {cards.map((card, index) => (
             <Reveal key={card.id} className="home-feature__card" delay={0.12 * index} y={22}>
               <span className="home-feature__card-icon" aria-hidden="true">
-                <img src={icons[card.icon]} alt="" />
+                <img src={icons[card.icon]} alt="" loading="lazy" decoding="async" />
               </span>
               <h3 className="home-feature__card-title">{card.title}</h3>
               <p className="home-feature__card-description">{card.description}</p>

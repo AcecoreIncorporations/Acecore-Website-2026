@@ -225,9 +225,9 @@ export default function HelpCenter() {
       <div className="help-center__shell">
         <Reveal className="help-center__hero">
           <p className="help-center__eyebrow">{helpHeroCopy.eyebrow}</p>
-          <h1 id="help-center-title" className="help-center__title">
+          <h2 id="help-center-title" className="help-center__title">
             {helpHeroCopy.title}
-          </h1>
+          </h2>
           <p className="help-center__description">{helpHeroCopy.description}</p>
           <HelpSearch value={query} onChange={setQuery} />
         </Reveal>

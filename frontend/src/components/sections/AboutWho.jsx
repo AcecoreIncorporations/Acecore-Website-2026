@@ -22,6 +22,8 @@ export default function AboutWho() {
               className="about-who__image"
               src={whoImage}
               alt="Professional working with a solar panel"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </Reveal>

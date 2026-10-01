@@ -55,13 +55,37 @@ export default function HomeEcosystem() {
             </div>
 
             <div className="home-ecosystem__visual home-ecosystem__visual--desktop" aria-hidden="true">
-              <img className="home-ecosystem__powercell" src={powercellImage} alt="" />
-              <img className="home-ecosystem__phone" src={phoneImage} alt="" />
+              <img
+                className="home-ecosystem__powercell"
+                src={powercellImage}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                className="home-ecosystem__phone"
+                src={phoneImage}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="home-ecosystem__visual home-ecosystem__visual--mobile" aria-hidden="true">
-              <img className="home-ecosystem__powercell" src={powercellImage} alt="" />
-              <img className="home-ecosystem__phone" src={phoneImage} alt="" />
+              <img
+                className="home-ecosystem__powercell"
+                src={powercellImage}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                className="home-ecosystem__phone"
+                src={phoneImage}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </Reveal>

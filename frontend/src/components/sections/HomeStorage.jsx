@@ -30,11 +30,20 @@ export default function HomeStorage() {
 
         <Reveal className="home-storage__stage" y={36}>
           <div className="home-storage__composition">
-            <img className="home-storage__mark" src={markImage} alt="" aria-hidden="true" />
+            <img
+              className="home-storage__mark"
+              src={markImage}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+            />
             <img
               className="home-storage__product"
               src={powercellImage}
               alt="Acecore 5kVA Powercell energy storage unit"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </Reveal>
@@ -53,6 +62,9 @@ export default function HomeStorage() {
                 className="home-storage__appliance-icon"
                 src={applianceIcons[item.id]}
                 alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
               />
               <span className="home-storage__appliance-label">{item.label}</span>
             </Reveal>

@@ -55,6 +55,8 @@ export default function ProductPowerOptions() {
               width={1430}
               height={1156}
               alt="Diagram showing a Powercell supplying household appliances including air conditioner, refrigerator, washing machine, lighting, television, laptop and router."
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </Reveal>

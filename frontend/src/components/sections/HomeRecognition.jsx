@@ -27,7 +27,7 @@ const recognitionAssets = [
 function LogoItem({ label, src }) {
   return (
     <li className="home-recognition__logo">
-      <img src={src} alt={label} />
+      <img src={src} alt={label} loading="lazy" decoding="async" />
     </li>
   );
 }

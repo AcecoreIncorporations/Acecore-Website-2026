@@ -50,8 +50,8 @@ export const footerGroups = [
 
 export const footerMeta = {
   legal: [
-    { label: 'Privacy', to: '/about' },
-    { label: 'Trademark', to: '/about' },
+    { label: 'Privacy', to: '/terms' },
+    { label: 'Terms', to: '/terms' },
   ],
   social: [
     { id: 'x', label: 'X', href: '#' },

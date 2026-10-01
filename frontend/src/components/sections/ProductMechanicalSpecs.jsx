@@ -30,6 +30,8 @@ export default function ProductMechanicalSpecs() {
               className="product-mech-specs__diagram"
               src={specificationsImage}
               alt="Exploded wireframe view of the Acecore Powercell mechanical assembly"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </Reveal>

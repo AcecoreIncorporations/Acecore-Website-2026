@@ -1,0 +1,17 @@
+{
+  "name": "Acecore Clean Energy",
+  "short_name": "Acecore",
+  "description": "Indigenously engineered clean energy generation, Powercell storage, and intelligent energy management.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    {
+      "src": "/favicon/favicon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

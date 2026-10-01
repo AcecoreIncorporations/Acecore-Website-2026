@@ -46,6 +46,7 @@ export default function QuoteLifestyleMedia({ className = '' }) {
           width={1600}
           height={900}
           loading="lazy"
+          decoding="async"
         />
       ) : (
         <video

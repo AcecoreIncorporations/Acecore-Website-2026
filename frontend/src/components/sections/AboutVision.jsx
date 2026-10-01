@@ -12,6 +12,8 @@ export default function AboutVision() {
               className="about-vision__image"
               src={visionImage}
               alt="Acecore branding on a dark surface"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="about-vision__copy">

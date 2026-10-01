@@ -6,6 +6,7 @@ import {
   supportFormFields,
   supportHeroCopy,
 } from '../../data/support';
+import { submitContactForm } from '../../services/contactApi';
 
 const emptyForm = supportFormFields.reduce((acc, field) => {
   acc[field.name] = '';
@@ -30,17 +31,71 @@ function ChannelCard({ label, value, href, external }) {
   );
 }
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function SupportContact() {
   const [form, setForm] = useState(emptyForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
+    if (status) setStatus(null);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Form wiring (API / email) comes later — UI only for now.
+    setStatus(null);
+
+    // Client-side validation
+    if (!form.fullName || form.fullName.trim().length < 2) {
+      setStatus({
+        type: 'error',
+        message: 'Please enter your full name (at least 2 characters).',
+      });
+      return;
+    }
+
+    if (!form.email || !EMAIL_REGEX.test(form.email.trim())) {
+      setStatus({
+        type: 'error',
+        message: 'Please enter a valid email address.',
+      });
+      return;
+    }
+
+    if (!form.message || form.message.trim().length < 5) {
+      setStatus({
+        type: 'error',
+        message: 'Please enter your message (at least 5 characters).',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await submitContactForm(form);
+      if (response.success) {
+        setStatus({
+          type: 'success',
+          message: response.message || 'Thank you! Your message has been sent successfully.',
+        });
+        setForm(emptyForm);
+      } else {
+        setStatus({
+          type: 'error',
+          message: response.error || 'Failed to send message. Please try again.',
+        });
+      }
+    } catch {
+      setStatus({
+        type: 'error',
+        message: 'A network error occurred. Please contact us directly at support@acecore.tech.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -63,6 +118,19 @@ export default function SupportContact() {
 
           <Reveal className="support-contact__form-wrap" y={24} delay={0.18}>
             <form className="support-form" onSubmit={handleSubmit} noValidate>
+              {status && (
+                <div
+                  className={`support-form__status support-form__status--${status.type}`}
+                  role={status.type === 'error' ? 'alert' : 'status'}
+                  aria-live="polite"
+                >
+                  <span className="support-form__status-icon" aria-hidden="true">
+                    {status.type === 'success' ? '✓' : '⚠️'}
+                  </span>
+                  <span className="support-form__status-text">{status.message}</span>
+                </div>
+              )}
+
               {supportFormFields.map((field) => {
                 const sharedProps = {
                   id: field.id,
@@ -70,6 +138,7 @@ export default function SupportContact() {
                   value: form[field.name],
                   onChange: handleChange,
                   autoComplete: field.autoComplete,
+                  disabled: isSubmitting,
                   className: 'support-form__control',
                 };
 
@@ -91,8 +160,13 @@ export default function SupportContact() {
               })}
 
               <div className="support-form__actions">
-                <Button type="submit" variant="brand" className="support-form__submit">
-                  Send message
+                <Button
+                  type="submit"
+                  variant="brand"
+                  className="support-form__submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending message...' : 'Send message'}
                 </Button>
               </div>
             </form>

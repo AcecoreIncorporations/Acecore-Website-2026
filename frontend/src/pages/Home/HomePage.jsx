@@ -1,4 +1,6 @@
 import PageLayout from '../../components/layout/PageLayout';
+import SEO from '../../components/common/SEO';
+import { seoPages } from '../../data/seoData';
 import HomeHero from '../../components/sections/HomeHero';
 import HomeIntro from '../../components/sections/HomeIntro';
 import HomeLifestyle from '../../components/sections/HomeLifestyle';
@@ -15,6 +17,7 @@ import HomeEcosystem from '../../components/sections/HomeEcosystem';
 export default function HomePage() {
   return (
     <PageLayout>
+      <SEO {...seoPages.home} />
       <HomeHero />
       <HomeIntro />
       <HomeLifestyle />

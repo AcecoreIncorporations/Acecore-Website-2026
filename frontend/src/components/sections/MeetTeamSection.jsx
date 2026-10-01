@@ -47,7 +47,7 @@ function TeamGroupSection({ group }) {
         <p className="meet-team__group-description">{group.description}</p>
       </Reveal>
 
-      <ul className="meet-team__grid" aria-hidden="true">
+      <ul className="meet-team__grid">
         {group.members.map((member) => (
           <TeamMemberCard key={member.id} member={member} />
         ))}

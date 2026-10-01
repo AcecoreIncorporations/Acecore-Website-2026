@@ -1,5 +1,7 @@
 import PageLayout from '../../components/layout/PageLayout';
 import Container from '../../components/ui/Container';
+import SEO from '../../components/common/SEO';
+import { seoPages } from '../../data/seoData';
 
 const termsSections = [
   {
@@ -88,6 +90,7 @@ const termsSections = [
 export default function TermsPage() {
   return (
     <PageLayout>
+      <SEO {...seoPages.terms} />
       <section className="terms-page">
         <Container className="terms-page__shell">
           <header className="terms-page__header">

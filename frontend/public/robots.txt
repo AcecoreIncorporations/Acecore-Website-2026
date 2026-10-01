@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow private transaction routes
+Disallow: /checkout
+Disallow: /order-confirmation
+
+# Sitemap location
+Sitemap: https://www.acecore.tech/sitemap.xml

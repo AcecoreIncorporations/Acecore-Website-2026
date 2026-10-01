@@ -1,0 +1,18 @@
+{
+  "name": "acecore-backend",
+  "version": "1.0.0",
+  "description": "Acecore API Server and Dynamic Pricing Service",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node tests/pricing.test.js && node tests/contact.test.js",
+    "test:pricing": "node tests/pricing.test.js",
+    "test:contact": "node tests/contact.test.js"
+  },
+  "keywords": ["acecore", "clean-energy", "pricing-api"],
+  "author": "Acecore Incorporations",
+  "license": "UNLICENSED",
+  "private": true
+}

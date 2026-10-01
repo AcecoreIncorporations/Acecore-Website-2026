@@ -178,6 +178,40 @@
   padding-top: 0.15rem;
 }
 
+.support-form__status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.85rem 1.05rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  box-sizing: border-box;
+}
+
+.support-form__status-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.support-form__status--success {
+  background: rgba(87, 239, 103, 0.1);
+  border: 1px solid rgba(87, 239, 103, 0.35);
+  color: #57ef67;
+}
+
+.support-form__status--error {
+  background: rgba(255, 75, 75, 0.1);
+  border: 1px solid rgba(255, 75, 75, 0.35);
+  color: #ff6b6b;
+}
+
+.support-form__control:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .support-form__submit.btn {
   width: 100%;
   min-height: 2.5rem;
@@ -185,6 +219,13 @@
   border-radius: 10px;
   font-size: 0.92rem;
   font-weight: 600;
+  transition: opacity 160ms ease;
+}
+
+.support-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* —— Tablet+ —— */

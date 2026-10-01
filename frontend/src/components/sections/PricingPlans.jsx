@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Reveal from '../ui/Reveal';
-import { pricingCopy, pricingModes, pricingPlans } from '../../data/pricing';
+import { usePricing } from '../../hooks/usePricing';
 
 export default function PricingPlans() {
-  const [mode, setMode] = useState(pricingModes[0].id);
+  const { modes, copy, plans } = usePricing();
+  const [mode, setMode] = useState('solar');
   const [openPlanId, setOpenPlanId] = useState(null);
   const activeIndex = Math.max(
     0,
-    pricingModes.findIndex((item) => item.id === mode),
+    modes.findIndex((item) => item.id === mode),
   );
 
   const togglePlan = (planId) => {
@@ -20,11 +21,11 @@ export default function PricingPlans() {
       <div className="pricing-plans__inner home-shell">
         <Reveal>
           <header className="pricing-plans__header">
-            <p className="pricing-plans__eyebrow">{pricingCopy.eyebrow}</p>
+            <p className="pricing-plans__eyebrow">{copy.eyebrow}</p>
             <h1 id="pricing-plans-title" className="pricing-plans__title">
-              {pricingCopy.title}
+              {copy.title}
             </h1>
-            <p className="pricing-plans__description">{pricingCopy.description}</p>
+            <p className="pricing-plans__description">{copy.description}</p>
 
             <div
               className="pricing-plans__toggle"
@@ -33,7 +34,7 @@ export default function PricingPlans() {
               data-active={activeIndex}
             >
               <span className="pricing-plans__toggle-pill" aria-hidden="true" />
-              {pricingModes.map((item) => (
+              {modes.map((item) => (
                 <button
                   key={item.id}
                   type="button"
@@ -49,7 +50,7 @@ export default function PricingPlans() {
         </Reveal>
 
         <div className="pricing-plans__grid">
-          {pricingPlans.map((plan, index) => {
+          {plans.map((plan, index) => {
             const isOpen = openPlanId === plan.id;
 
             return (
@@ -89,7 +90,7 @@ export default function PricingPlans() {
                     <div className="pricing-card__details-inner">
                       <div className="pricing-card__instalments">
                         <p className="pricing-card__instalments-label">
-                          {pricingCopy.instalmentLabel}
+                          {copy.instalmentLabel}
                         </p>
                         <ul className="pricing-card__instalments-list">
                           {plan.instalments.map((row) => (
@@ -109,7 +110,7 @@ export default function PricingPlans() {
                         <span className="pricing-card__cta-icon" aria-hidden="true">
                           ↗
                         </span>
-                        <span>{pricingCopy.cta}</span>
+                        <span>{copy.cta}</span>
                       </Link>
                     </div>
                   </div>

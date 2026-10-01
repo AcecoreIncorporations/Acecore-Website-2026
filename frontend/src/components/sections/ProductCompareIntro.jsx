@@ -19,6 +19,8 @@ export default function ProductCompareIntro() {
             className="product-compare-intro__placeholder"
             src={boldSolutionImage}
             alt="Boldsolution energy comparison visual"
+            loading="lazy"
+            decoding="async"
           />
         </Reveal>
       </div>
