@@ -1,6 +1,6 @@
 import Reveal from '../ui/Reveal';
 import { recognitionCopy, recognitionLogos } from '../../data/home';
-import acecoreWhiteLogo from '../../assets/logos/acecore-white.png';
+import nivLogo from '../../assets/logos/niv.png';
 import antLogo from '../../assets/logos/Ant.png';
 import metaLogo from '../../assets/logos/Meta.png';
 import mitLogo from '../../assets/logos/mit.png';
@@ -12,14 +12,14 @@ import solLogo from '../../assets/logos/sol.png';
 import tesLogo from '../../assets/logos/tes.png';
 
 const recognitionAssets = [
-  acecoreWhiteLogo,
+  nasLogo,
   antLogo,
   mitLogo,
-  metaLogo,
-  nasLogo,
+  setLogo,
+  nivLogo,
   ostLogo,
   parLogo,
-  setLogo,
+  metaLogo,
   solLogo,
   tesLogo,
 ];
