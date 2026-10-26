@@ -12,44 +12,50 @@ export const pricingCopy = {
   instalmentLabel: 'Installation payment',
 };
 
-const sharedInstalments = [
-  { label: '3 Months (+7% interest)', amount: '₦636,700' },
-  { label: '4 Months (+10% interest)', amount: '₦477,500' },
-  { label: '5 Months (+13% interest)', amount: '₦382,000' },
-];
-
 export const pricingPlans = [
   {
     id: 'prime',
     name: 'POWERCELL PRIME',
-    amount: 4_400_000,
+    amount: 2_500_000,
     prices: {
-      solar: '₦4,000,000',
-      powercell: '₦3,000,000',
+      solar: '₦2,500,000',
+      powercell: '₦2,500,000',
     },
-    specs: ['3.5kW Output', '5kWh Capacity'],
-    instalments: sharedInstalments,
+    specs: ['3.5kVA Output', '5kWh Capacity'],
+    instalments: [
+      { label: '3 Months (+7% interest)', amount: '₦891,700' },
+      { label: '4 Months (+10% interest)', amount: '₦687,500' },
+      { label: '5 Months (+13% interest)', amount: '₦565,000' },
+    ],
   },
   {
     id: 'prime-plus',
     name: 'POWERCELL PRIME+',
-    amount: 8_900_000,
+    amount: 4_300_000,
     prices: {
-      solar: '₦7,500,000',
-      powercell: '₦5,500,000',
+      solar: '₦4,300,000',
+      powercell: '₦4,300,000',
     },
-    specs: ['3.5kW Output', '5kWh Capacity'],
-    instalments: sharedInstalments,
+    specs: ['5kVA Output', '10kWh Capacity'],
+    instalments: [
+      { label: '3 Months (+7% interest)', amount: '₦1,533,700' },
+      { label: '4 Months (+10% interest)', amount: '₦1,182,500' },
+      { label: '5 Months (+13% interest)', amount: '₦971,800' },
+    ],
   },
   {
     id: 'ultra',
     name: 'POWERCELL ULTRA',
-    amount: 15_500_000,
+    amount: 7_500_000,
     prices: {
-      solar: '₦12,000,000',
-      powercell: '₦10,000,000',
+      solar: '₦7,500,000',
+      powercell: '₦7,500,000',
     },
-    specs: ['3.5kW Output', '5kWh Capacity'],
-    instalments: sharedInstalments,
+    specs: ['10kVA Output', '15kWh Capacity'],
+    instalments: [
+      { label: '3 Months (+7% interest)', amount: '₦2,675,000' },
+      { label: '4 Months (+10% interest)', amount: '₦2,062,500' },
+      { label: '5 Months (+13% interest)', amount: '₦1,695,000' },
+    ],
   },
 ];

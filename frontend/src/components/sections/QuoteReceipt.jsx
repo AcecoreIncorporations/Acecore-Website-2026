@@ -22,7 +22,7 @@ function parseDisplayPrice(price) {
 }
 
 function formatCurrency(amount) {
-  return `£${amount.toLocaleString('en-GB')}*`;
+  return `₦${amount.toLocaleString('en-NG')}*`;
 }
 
 export default function QuoteReceipt({ form, packageItem, quotationNumber }) {

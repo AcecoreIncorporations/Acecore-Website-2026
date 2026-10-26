@@ -93,7 +93,7 @@ async function runTests() {
       url: '/api/pricing/prime',
       body: {
         prices: {
-          solar: '₦4,250,000',
+          solar: '₦2,800,000',
         },
       },
     });
@@ -103,7 +103,7 @@ async function runTests() {
 
     // Verify change persisted
     const verifyUpdated = await testRequest(server, { url: '/api/pricing/prime' });
-    if (verifyUpdated.data.data.prices.solar !== '₦4,250,000') {
+    if (verifyUpdated.data.data.prices.solar !== '₦2,800,000') {
       throw new Error(`Price update did not persist: ${verifyUpdated.data.data.prices.solar}`);
     }
     console.log(`✓ Dynamic pricing update verified: solar price is now "${verifyUpdated.data.data.prices.solar}"`);
@@ -114,7 +114,7 @@ async function runTests() {
       throw new Error(`POST /api/pricing/reset failed`);
     }
     const verifyReset = await testRequest(server, { url: '/api/pricing/prime' });
-    if (verifyReset.data.data.prices.solar !== '₦4,000,000') {
+    if (verifyReset.data.data.prices.solar !== '₦2,500,000') {
       throw new Error(`Reset failed: ${verifyReset.data.data.prices.solar}`);
     }
     console.log(`✓ Reset to defaults verified: solar price restored to "${verifyReset.data.data.prices.solar}"`);
