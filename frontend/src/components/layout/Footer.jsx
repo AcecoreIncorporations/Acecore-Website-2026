@@ -33,10 +33,10 @@ export default function Footer() {
                     <li key={link.label}>
                       {link.to ? (
                         <Link to={link.to}>{link.label}</Link>
-                      ) : (
+                      ) : link.href ? (
                         <a
                           href={link.href}
-                          {...(String(link.href || '').endsWith('.pdf')
+                          {...(String(link.href).endsWith('.pdf')
                             ? {
                                 download: true,
                                 target: '_blank',
@@ -46,7 +46,10 @@ export default function Footer() {
                         >
                           {link.label}
                         </a>
-                      )}                    </li>
+                      ) : (
+                        <span aria-disabled="true">{link.label}</span>
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -71,15 +74,21 @@ export default function Footer() {
             <ul className="footer__social">
               {footerMeta.social.map((item) => (
                 <li key={item.id}>
-                  <a
-                    className="footer__social-link"
-                    href={item.href}
-                    aria-label={item.label}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={socialIcons[item.id]} alt="" />
-                  </a>
+                  {item.href ? (
+                    <a
+                      className="footer__social-link"
+                      href={item.href}
+                      aria-label={item.label}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src={socialIcons[item.id]} alt="" />
+                    </a>
+                  ) : (
+                    <span className="footer__social-link" aria-label={`${item.label} link unavailable`}>
+                      <img src={socialIcons[item.id]} alt="" />
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

@@ -20,84 +20,141 @@
     {
       "id": "prime",
       "name": "POWERCELL PRIME",
-      "amount": 2500000,
+      "amount": 3050000,
       "prices": {
-        "solar": "₦2,500,000",
-        "powercell": "₦2,500,000"
+        "solar": "₦3,050,000",
+        "powercell": "₦2,600,000"
       },
       "specs": [
         "3.5kVA Output",
         "5kWh Capacity"
       ],
-      "instalments": [
-        {
-          "label": "3 Months (+7% interest)",
-          "amount": "₦891,700"
-        },
-        {
-          "label": "4 Months (+10% interest)",
-          "amount": "₦687,500"
-        },
-        {
-          "label": "5 Months (+13% interest)",
-          "amount": "₦565,000"
-        }
-      ]
+      "solarSpecs": [
+        "Three 610w Solar Panels"
+      ],
+      "instalments": {
+        "solar": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦1,087,833"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦838,750"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦689,300"
+          }
+        ],
+        "powercell": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦927,333"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦715,000"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦587,600"
+          }
+        ]
+      }
     },
     {
       "id": "prime-plus",
       "name": "POWERCELL PRIME+",
-      "amount": 4300000,
+      "amount": 5200000,
       "prices": {
-        "solar": "₦4,300,000",
+        "solar": "₦5,200,000",
         "powercell": "₦4,300,000"
       },
       "specs": [
         "5kVA Output",
         "10kWh Capacity"
       ],
-      "instalments": [
-        {
-          "label": "3 Months (+7% interest)",
-          "amount": "₦1,533,700"
-        },
-        {
-          "label": "4 Months (+10% interest)",
-          "amount": "₦1,182,500"
-        },
-        {
-          "label": "5 Months (+13% interest)",
-          "amount": "₦971,800"
-        }
-      ]
+      "solarSpecs": [
+        "Six 610w Solar Panels"
+      ],
+      "instalments": {
+        "solar": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦1,854,667"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦1,430,000"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦1,175,200"
+          }
+        ],
+        "powercell": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦1,533,667"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦1,182,500"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦971,800"
+          }
+        ]
+      }
     },
     {
       "id": "ultra",
       "name": "POWERCELL ULTRA",
-      "amount": 7500000,
+      "amount": 10000000,
       "prices": {
-        "solar": "₦7,500,000",
-        "powercell": "₦7,500,000"
+        "solar": "₦10,000,000",
+        "powercell": "₦8,200,000"
       },
       "specs": [
         "10kVA Output",
-        "15kWh Capacity"
+        "20kWh Capacity"
       ],
-      "instalments": [
-        {
-          "label": "3 Months (+7% interest)",
-          "amount": "₦2,675,000"
-        },
-        {
-          "label": "4 Months (+10% interest)",
-          "amount": "₦2,062,500"
-        },
-        {
-          "label": "5 Months (+13% interest)",
-          "amount": "₦1,695,000"
-        }
-      ]
+      "solarSpecs": [
+        "Twelve 610w Solar Panels"
+      ],
+      "instalments": {
+        "solar": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦3,566,667"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦2,750,000"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦2,260,000"
+          }
+        ],
+        "powercell": [
+          {
+            "label": "3 Months (+7% interest)",
+            "amount": "₦2,924,667"
+          },
+          {
+            "label": "4 Months (+10% interest)",
+            "amount": "₦2,255,000"
+          },
+          {
+            "label": "5 Months (+13% interest)",
+            "amount": "₦1,853,200"
+          }
+        ]
+      }
     }
   ],
-  "updatedAt": "2026-10-26T14:19:21.256Z"
+  "updatedAt": "2026-11-10T09:14:17.753Z"
 }

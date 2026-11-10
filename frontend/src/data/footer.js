@@ -41,8 +41,8 @@ export const footerGroups = [
     title: 'Download',
     links: [
       { label: 'User Manual (PDF)', href: '/docs/acecore-powercell-user-manual.pdf' },
-      { label: 'Apple Store', href: '#' },
-      { label: 'Google Play Store', href: '#' },
+      { label: 'Apple Store', href: null },
+      { label: 'Google Play Store', href: null },
       { label: 'Term of Use', href: '/docs/Acecore Term of use.pdf' }
     ],
   },
@@ -54,9 +54,13 @@ export const footerMeta = {
     { label: 'Terms', to: '/terms' },
   ],
   social: [
-    { id: 'x', label: 'X', href: '#' },
-    { id: 'instagram', label: 'Instagram', href: '#' },
-    { id: 'linkedin', label: 'LinkedIn', href: '#' },
-    { id: 'facebook', label: 'Facebook', href: '#' },
+    { id: 'x', label: 'X', href: 'https://x.com/Acecore_Inc' },
+    { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/acecore_inc/' },
+    {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/acecore-incorporations/',
+    },
+    { id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/AceCore.io' },
   ],
 };

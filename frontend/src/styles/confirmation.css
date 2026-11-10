@@ -2,7 +2,6 @@
 
 .confirmation {
   --confirmation-surface: #161616;
-  --confirmation-surface-2: #101010;
   --confirmation-muted: #8a8a8a;
   background: #000000;
   max-width: 100vw;
@@ -17,11 +16,13 @@
   min-width: 0;
 }
 
-.confirmation__grid {
-  display: grid;
-  gap: 1.25rem;
+.confirmation-card.confirmation-sales {
   margin-top: 1.25rem;
-  min-width: 0;
+  max-width: 48rem;
+}
+
+.confirmation-sales__link {
+  margin-top: 1.25rem;
 }
 
 .confirmation-hero,
@@ -142,160 +143,6 @@
   letter-spacing: -0.02em;
 }
 
-.confirmation-timeline {
-  display: grid;
-  gap: 0;
-  margin: 1.85rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.confirmation-timeline__item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2.15rem minmax(0, 1fr);
-  gap: 1rem;
-  align-items: start;
-}
-
-.confirmation-timeline__item:not(:last-child) {
-  padding-bottom: 1.85rem;
-}
-
-.confirmation-timeline__item:not(:last-child)::before {
-  content: '';
-  position: absolute;
-  top: 2.15rem;
-  bottom: 0;
-  left: 1.05rem;
-  width: 1px;
-  background: #2f2f2f;
-}
-
-.confirmation-timeline__marker {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 2.15rem;
-  height: 2.15rem;
-  border-radius: 999px;
-  background: #2a2a2a;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.6875rem;
-  font-weight: 700;
-}
-
-.confirmation-timeline__item--current .confirmation-timeline__marker,
-.confirmation-timeline__item--complete .confirmation-timeline__marker {
-  background: var(--color-brand);
-  color: #ffffff;
-}
-
-.confirmation-timeline__title {
-  margin: 0.15rem 0 0;
-  color: #ffffff;
-  font-size: 0.96875rem;
-  font-weight: 600;
-}
-
-.confirmation-timeline__description {
-  margin: 0.35rem 0 0;
-  color: var(--confirmation-muted);
-  font-size: 0.8125rem;
-  line-height: 1.45;
-}
-
-.confirmation-product {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.85rem 1rem;
-  align-items: start;
-  margin-top: 1.5rem;
-  padding: 1.15rem 1.2rem;
-  border-radius: 8px;
-  background: var(--confirmation-surface-2);
-}
-
-.confirmation-product__name {
-  margin: 0;
-  color: #ffffff;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.confirmation-product__config,
-.confirmation-product__order {
-  margin: 0.3rem 0 0;
-  color: var(--confirmation-muted);
-}
-
-.confirmation-product__config {
-  font-size: 0.8125rem;
-}
-
-.confirmation-product__order {
-  font-size: 0.75rem;
-}
-
-.confirmation-product__price {
-  margin: 0;
-  color: #ffffff;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.confirmation-delivery {
-  display: grid;
-  gap: 1.15rem;
-  margin-top: 1.5rem;
-}
-
-.confirmation-delivery__label {
-  margin: 0;
-  color: var(--confirmation-muted);
-  font-size: 0.8125rem;
-}
-
-.confirmation-delivery__address {
-  margin: 0.35rem 0 0;
-  color: #ffffff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  overflow-wrap: anywhere;
-}
-
-.confirmation-delivery__method {
-  margin: 0.25rem 0 0;
-  color: var(--confirmation-muted);
-  font-size: 0.8125rem;
-}
-
-.confirmation-track {
-  width: 100%;
-  min-height: 3.1rem;
-  padding: 0.75rem 1.25rem;
-  border: 0;
-  border-radius: 8px;
-  background: #12352f;
-  color: var(--color-brand);
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.confirmation-track:hover {
-  background: #16443c;
-}
-
-.confirmation-track__status {
-  margin: 0.85rem 0 0;
-  color: var(--color-brand);
-  font-size: 0.875rem;
-  line-height: 1.45;
-}
-
 .confirmation-empty {
   display: grid;
   gap: 0.85rem;
@@ -364,13 +211,6 @@
     width: min(100%, 80rem);
   }
 
-  .confirmation__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.15rem;
-    margin-top: 1.15rem;
-    align-items: stretch;
-  }
-
   .confirmation-hero {
     grid-template-columns: minmax(0, 1.8fr) minmax(18.75rem, 0.9fr);
     gap: 3.25rem;
@@ -402,33 +242,9 @@
   }
 
   .confirmation-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 24.5rem;
     padding: 1.85rem 1.9rem;
   }
 
-  .confirmation-timeline {
-    margin-top: 2.1rem;
-  }
-
-  .confirmation-product {
-    padding: 1.3rem 1.4rem;
-  }
-
-  .confirmation-delivery {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 15.4rem;
-    gap: 1.5rem;
-    align-items: end;
-    margin-top: auto;
-    padding-top: 1.75rem;
-  }
-
-  .confirmation-track {
-    width: 15.4rem;
-    min-height: 3.15rem;
-  }
 }
 
 @media (min-width: 1280px) {

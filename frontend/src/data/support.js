@@ -5,28 +5,29 @@ export const supportHeroCopy = {
     'Feel free to reach out for help with your order or any questions you may have regarding your purchase',
 };
 
+export const whatsappSupportChannel = {
+  id: 'whatsapp',
+  label: 'WhatsApp',
+  value: '+234 901 529 4724',
+  href: 'https://wa.me/2349015294724',
+  external: true,
+};
+
 export const supportChannels = [
   {
     id: 'email',
-    label: 'EMAIL',
+    label: 'Contact Sales Team',
     value: 'chimka@acecore.tech',
     href: 'mailto:chimka@acecore.tech',
     external: false,
   },
+  whatsappSupportChannel,
   {
-    id: 'whatsapp',
-    label: 'WhatsApp',
-    value: '+234 901 529 4724',
-    href: 'https://wa.me/2349015294724',
-    external: true,
-  },
-
-   {
-    id: 'whatsapp',
-    label: 'PHONE',
+    id: 'call',
+    label: 'Get On a Call',
     value: '+234 706 757 9254',
-    // href: 'https://wa.me/2349015294724',
-    external: true,
+    href: 'tel:+2347067579254',
+    external: false,
   },
 ];
 

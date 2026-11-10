@@ -65,6 +65,7 @@ export default function AboutHero() {
             className="about-hero__image"
             src={heroImage}
             alt="Solar panels representing Acecore renewable energy solutions"
+            fetchPriority="high"
           />
         </Reveal>
 

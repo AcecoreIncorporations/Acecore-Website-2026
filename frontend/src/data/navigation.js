@@ -1,5 +1,5 @@
 export const primaryNav = [
-  { label: 'The Powercell', to: '/product' },
+  { label: 'Our Infrastructure', to: '/product' },
   { label: 'Pricing', to: '/pricing' },
   // {
   //   label: 'Our services',

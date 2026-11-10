@@ -114,8 +114,54 @@ async function runTests() {
       throw new Error(`POST /api/pricing/reset failed`);
     }
     const verifyReset = await testRequest(server, { url: '/api/pricing/prime' });
-    if (verifyReset.data.data.prices.solar !== '₦2,500,000') {
+    if (verifyReset.data.data.prices.solar !== '₦3,050,000') {
       throw new Error(`Reset failed: ${verifyReset.data.data.prices.solar}`);
+    }
+    const resetPricing = await testRequest(server, { url: '/api/pricing' });
+    const expectedPrices = {
+      prime: { solar: '₦3,050,000', powercell: '₦2,600,000' },
+      'prime-plus': { solar: '₦5,200,000', powercell: '₦4,300,000' },
+      ultra: { solar: '₦10,000,000', powercell: '₦8,200,000' },
+    };
+    const expectedInstalments = {
+      prime: {
+        solar: ['₦1,087,833', '₦838,750', '₦689,300'],
+        powercell: ['₦927,333', '₦715,000', '₦587,600'],
+      },
+      'prime-plus': {
+        solar: ['₦1,854,667', '₦1,430,000', '₦1,175,200'],
+        powercell: ['₦1,533,667', '₦1,182,500', '₦971,800'],
+      },
+      ultra: {
+        solar: ['₦3,566,667', '₦2,750,000', '₦2,260,000'],
+        powercell: ['₦2,924,667', '₦2,255,000', '₦1,853,200'],
+      },
+    };
+    const expectedSolarSpecs = {
+      prime: ['Three 610w Solar Panels'],
+      'prime-plus': ['Six 610w Solar Panels'],
+      ultra: ['Twelve 610w Solar Panels'],
+    };
+    for (const plan of resetPricing.data.data.plans) {
+      const expected = expectedPrices[plan.id];
+      if (
+        !expected ||
+        plan.prices.solar !== expected.solar ||
+        plan.prices.powercell !== expected.powercell
+      ) {
+        throw new Error(`Reset prices are incorrect for ${plan.id}: ${JSON.stringify(plan.prices)}`);
+      }
+      if (JSON.stringify(plan.solarSpecs) !== JSON.stringify(expectedSolarSpecs[plan.id])) {
+        throw new Error(`Solar specs are incorrect for ${plan.id}: ${JSON.stringify(plan.solarSpecs)}`);
+      }
+      for (const mode of ['solar', 'powercell']) {
+        const amounts = plan.instalments?.[mode]?.map((row) => row.amount);
+        if (JSON.stringify(amounts) !== JSON.stringify(expectedInstalments[plan.id][mode])) {
+          throw new Error(
+            `Installments are incorrect for ${plan.id} (${mode}): ${JSON.stringify(amounts)}`,
+          );
+        }
+      }
     }
     console.log(`✓ Reset to defaults verified: solar price restored to "${verifyReset.data.data.prices.solar}"`);
 

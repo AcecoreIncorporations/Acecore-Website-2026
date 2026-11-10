@@ -63,7 +63,7 @@ export default function HomeRecognition() {
         <div className="home-recognition__marquee-track">
           {loopLogos.map((src, index) => (
             <span className="home-recognition__logo" key={`${src}-${index}`}>
-              <img src={src} alt="" />
+              <img src={src} alt="" loading="lazy" decoding="async" />
             </span>
           ))}
         </div>

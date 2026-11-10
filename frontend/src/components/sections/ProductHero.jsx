@@ -55,6 +55,7 @@ export default function ProductHero() {
                 className="product-hero__product"
                 src={powercellImage}
                 alt="Acecore Powercell energy storage unit"
+                fetchPriority="high"
               />
             </div>
           </div>

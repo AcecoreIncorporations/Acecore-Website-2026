@@ -16,7 +16,7 @@ const copy = {
   },
   secondary: {
     label: 'Download app',
-    href: '#',
+    href: null,
   },
 };
 
@@ -43,14 +43,25 @@ export default function HomeEcosystem() {
                 <Button as={Link} to={copy.primary.to} variant="brand" className="home-ecosystem__btn">
                   {copy.primary.label}
                 </Button>
-                <a className="home-ecosystem__download" href={copy.secondary.href}>
-                  <span className="home-ecosystem__download-icons" aria-hidden="true">
-                    <img src={appleLogo} alt="" width={21} height={26} />
-                    <span className="home-ecosystem__download-divider" />
-                    <img src={googlePlayLogo} alt="" width={23} height={26} />
+                {copy.secondary.href ? (
+                  <a className="home-ecosystem__download" href={copy.secondary.href}>
+                    <span className="home-ecosystem__download-icons" aria-hidden="true">
+                      <img src={appleLogo} alt="" width={21} height={26} />
+                      <span className="home-ecosystem__download-divider" />
+                      <img src={googlePlayLogo} alt="" width={23} height={26} />
+                    </span>
+                    <span>{copy.secondary.label}</span>
+                  </a>
+                ) : (
+                  <span className="home-ecosystem__download" aria-disabled="true">
+                    <span className="home-ecosystem__download-icons" aria-hidden="true">
+                      <img src={appleLogo} alt="" width={21} height={26} />
+                      <span className="home-ecosystem__download-divider" />
+                      <img src={googlePlayLogo} alt="" width={23} height={26} />
+                    </span>
+                    <span>{copy.secondary.label}</span>
                   </span>
-                  <span>{copy.secondary.label}</span>
-                </a>
+                )}
               </div>
             </div>
 

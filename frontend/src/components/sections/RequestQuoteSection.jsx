@@ -6,22 +6,32 @@ import Button from '../ui/Button';
 import QuoteLifestyleMedia from './QuoteLifestyleMedia';
 import QuoteReceipt from './QuoteReceipt';
 import {
-  quotePackages,
+  getQuotePackages,
+  quoteStates,
   requestQuoteCopy,
   resolveQuotePackageId,
 } from '../../data/requestQuote';
 import { getQuoteSession, setQuoteSession } from '../../lib/quoteSession';
+import { usePricing } from '../../hooks/usePricing';
 
 const emptyForm = {
   installationAddress: '',
+  state: '',
   firstName: '',
   lastName: '',
   email: '',
   confirmEmail: '',
   phone: '',
   hasSolar: '',
-  receiveUpdates: false,
+  facilityType: '',
 };
+
+const facilityTypes = [
+  { value: 'bungalow', label: 'Bungalow' },
+  { value: 'duplex', label: 'Duplex' },
+  { value: 'storyBuilding', label: 'Story Buildings/Apartment Floor' },
+  { value: 'warehouse', label: 'Warehouse' },
+];
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -39,7 +49,9 @@ function readStoredForm() {
 function readStoredReceipt() {
   const session = getQuoteSession();
   if (!session?.committed || !session.quotationNumber || !session.packageId) return null;
-  const packageItem = quotePackages.find((item) => item.id === session.packageId);
+  const packageItem =
+    session.packageItem ||
+    getQuotePackages().find((item) => item.id === session.packageId);
   if (!packageItem || !session.form) return null;
   return {
     form: session.form,
@@ -133,7 +145,9 @@ function QuoteReceiptModal({ receipt, open, onClose }) {
 }
 
 export default function RequestQuoteSection() {
+  const { plans } = usePricing();
   const [searchParams] = useSearchParams();
+  const quotePackages = useMemo(() => getQuotePackages(plans), [plans]);
   const modelParam = searchParams.get('model');
   const initialPackageId = useMemo(() => {
     if (modelParam) {
@@ -156,15 +170,25 @@ export default function RequestQuoteSection() {
     setSelectedPackageId(resolveQuotePackageId(modelParam, searchParams.get('config')));
   }, [modelParam, searchParams]);
 
+  const selectedPackage =
+    quotePackages.find((item) => item.id === selectedPackageId) || quotePackages[0];
+
   useEffect(() => {
     setQuoteSession({
       packageId: selectedPackageId,
+      packageItem: selectedPackage,
       form,
     });
-  }, [selectedPackageId, form]);
+  }, [selectedPackageId, selectedPackage, form]);
 
-  const selectedPackage =
-    quotePackages.find((item) => item.id === selectedPackageId) || quotePackages[0];
+  const modalReceipt = receipt
+    ? {
+        ...receipt,
+        packageItem:
+          quotePackages.find((item) => item.id === receipt.packageItem.id) ||
+          receipt.packageItem,
+      }
+    : null;
 
   const updateField = (name, value) => {
     setForm((current) => ({ ...current, [name]: value }));
@@ -184,6 +208,7 @@ export default function RequestQuoteSection() {
     if (!form.installationAddress.trim()) {
       next.installationAddress = 'Enter an installation address.';
     }
+    if (!form.state) next.state = 'Select your state.';
     if (!form.firstName.trim()) next.firstName = 'Enter your first name.';
     if (!form.lastName.trim()) next.lastName = 'Enter your last name.';
     if (!form.email.trim()) next.email = 'Enter your email address.';
@@ -193,7 +218,9 @@ export default function RequestQuoteSection() {
       next.confirmEmail = 'Email addresses must match.';
     }
     if (!form.phone.trim()) next.phone = 'Enter your phone number.';
-    if (!form.hasSolar) next.hasSolar = 'Select whether you currently have solar.';
+    if (selectedPackage?.config === 'solar' && !form.facilityType) {
+      next.facilityType = 'Select your facility type.';
+    }
 
     return next;
   };
@@ -214,6 +241,7 @@ export default function RequestQuoteSection() {
       getQuoteSession()?.quotationNumber || createQuotationNumber();
     setQuoteSession({
       packageId: selectedPackageId,
+      packageItem: selectedPackage,
       form: { ...form },
       committed: true,
       quotationNumber,
@@ -313,6 +341,30 @@ export default function RequestQuoteSection() {
 
               <form className="request-quote__form" onSubmit={handleSubmit} noValidate>
                 <div className="request-quote__field">
+                  <label htmlFor="rq-state">State</label>
+                  <select
+                    id="rq-state"
+                    name="state"
+                    value={form.state}
+                    onChange={(event) => updateField('state', event.target.value)}
+                    aria-invalid={Boolean(errors.state)}
+                    aria-describedby={errors.state ? 'rq-state-error' : undefined}
+                  >
+                    <option value="">Select your state</option>
+                    {quoteStates.map(([value, label]) => (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.state ? (
+                    <p id="rq-state-error" className="request-quote__error" role="alert">
+                      {errors.state}
+                    </p>
+                  ) : null}
+                </div>
+
+                <div className="request-quote__field">
                   <label htmlFor="rq-address">Installation Address</label>
                   <input
                     id="rq-address"
@@ -329,6 +381,36 @@ export default function RequestQuoteSection() {
                     </p>
                   ) : null}
                 </div>
+
+                {selectedPackage?.config === 'solar' ? (
+                  <div className="request-quote__field">
+                    <label htmlFor="rq-facility-type">Type of Facility</label>
+                    <select
+                      id="rq-facility-type"
+                      name="facilityType"
+                      value={form.facilityType}
+                      onChange={(event) => updateField('facilityType', event.target.value)}
+                      aria-invalid={Boolean(errors.facilityType)}
+                      aria-describedby={errors.facilityType ? 'rq-facility-type-error' : undefined}
+                    >
+                      <option value="">Select your facility type</option>
+                      {facilityTypes.map((facility) => (
+                        <option key={facility.value} value={facility.value}>
+                          {facility.label}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.facilityType ? (
+                      <p
+                        id="rq-facility-type-error"
+                        className="request-quote__error"
+                        role="alert"
+                      >
+                        {errors.facilityType}
+                      </p>
+                    ) : null}
+                  </div>
+                ) : null}
 
                 <div className="request-quote__field">
                   <label htmlFor="rq-first-name">First Name</label>
@@ -422,7 +504,7 @@ export default function RequestQuoteSection() {
                   ) : null}
                 </div>
 
-                <fieldset className="request-quote__solar">
+                {/* <fieldset className="request-quote__solar">
                   <legend>Do You Currently Have Solar?</legend>
                   <div className="request-quote__solar-options" role="presentation">
                     {['No', 'Yes'].map((option) => {
@@ -450,21 +532,9 @@ export default function RequestQuoteSection() {
                       {errors.hasSolar}
                     </p>
                   ) : null}
-                </fieldset>
+                </fieldset> */}
 
                 <p className="request-quote__installer-note">{requestQuoteCopy.installerNote}</p>
-
-                <label className="request-quote__checkbox">
-                  <input
-                    type="checkbox"
-                    checked={form.receiveUpdates}
-                    onChange={(event) => updateField('receiveUpdates', event.target.checked)}
-                  />
-                  <span>{requestQuoteCopy.updatesLabel}</span>
-                </label>
-                <Link className="request-quote__updates-link" to={requestQuoteCopy.updatesLinkHref}>
-                  {requestQuoteCopy.updatesLinkLabel}
-                </Link>
 
                 <p className="request-quote__legal">{requestQuoteCopy.legal}</p>
 
@@ -478,7 +548,7 @@ export default function RequestQuoteSection() {
                   </p>
                 ) : null}
 
-                {receipt ? (
+                {/* {receipt ? (
                   <button
                     type="button"
                     className="request-quote__view-quote"
@@ -486,7 +556,7 @@ export default function RequestQuoteSection() {
                   >
                     View quotation
                   </button>
-                ) : null}
+                ) : null} */}
               </form>
             </Reveal>
           </div>
@@ -498,7 +568,7 @@ export default function RequestQuoteSection() {
       </div>
 
       <QuoteReceiptModal
-        receipt={receipt}
+        receipt={modalReceipt}
         open={receiptOpen}
         onClose={() => setReceiptOpen(false)}
       />

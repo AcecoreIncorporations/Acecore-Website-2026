@@ -127,7 +127,7 @@ export default function HomeAdvantage() {
               >
                 <span className="home-advantage__number">{card.number}</span>
                 <span className="home-advantage__icon" aria-hidden="true">
-                  <img src={icons[card.icon]} alt="" />
+                  <img src={icons[card.icon]} alt="" loading="lazy" decoding="async" />
                 </span>
                 <h3 className="home-advantage__card-title">{card.title}</h3>
                 <p className="home-advantage__card-description">{card.description}</p>

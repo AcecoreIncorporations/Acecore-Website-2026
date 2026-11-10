@@ -8,12 +8,12 @@ export const homeFaqs = [
     answer:
       'Not what, Who? Acecore is a clean energy company that indigeneously designs, manufactures, and deploys clean energy solutions for homes and businesses.',
   },
-  // {
-  //   id: 'home-2',
-  //   question: 'Are Acecore solar panels efficient?',
-  //   answer:
-  //     'Yes. Acecore panels are engineered for high conversion efficiency so you get strong energy output from the available sunlight.',
-  // },
+  {
+    id: 'home-2',
+    question: 'Can I get a powercell customized specifically for my business needs?',
+    answer:
+      'Yes you can. Please reach out to our sales team through the contact us page and we will be happy to help you with your custom powercell.',
+  },
   {
     id: 'home-3',
     question: 'Do Acecore products come with warranties?',

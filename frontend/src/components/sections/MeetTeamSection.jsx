@@ -17,7 +17,7 @@ function TeamPhoto({ className = '' }) {
 }
 
 function TeamMemberCard({ member }) {
-  const hasContent = Boolean(member?.name || member?.image);
+  const hasContent = Boolean(member?.name || member?.role || member?.image);
 
   return (
     <li
@@ -27,6 +27,13 @@ function TeamMemberCard({ member }) {
       {member?.image ? (
         <img src={member.image} alt={member.name || ''} className="meet-team__card-image" />
       ) : null}
+
+      {(member?.name || member?.role) && (
+        <div className="meet-team__card-body">
+          {member?.name ? <p className="meet-team__card-name">{member.name}</p> : null}
+          {member?.role ? <p className="meet-team__card-role">{member.role}</p> : null}
+        </div>
+      )}
     </li>
   );
 }

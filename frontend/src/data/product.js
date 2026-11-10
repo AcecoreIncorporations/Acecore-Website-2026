@@ -74,10 +74,16 @@ export const productRuntimeOptions = [
 ];
 
 export const productPowercoreAppCopy = {
-  eyebrow: 'WHAT IT CAN POWER',
+  // eyebrow: 'WHAT IT CAN POWER',
   title: 'The Powercore App',
   description:
     'With the Acecore PowerCore app, you have a powerful tool at your disposal to harness the full potential of your Acecore Powercell. The app helps you monitor and manage your energy consumption based on your needs. It also analyzes weather conditions and available sunlight to estimate how best you should consume energy. The app is designed to help you make informed decisions about your energy usage, ensuring that you get the most out of your Powercell.',
+};
+
+export const productSmartSocketCopy = {
+  title: 'The Smart Socket',
+  description:
+    'The Acecore Smart Socket turns your appliances into intelligent, controllable energy loads. It gives you direct visibility and control over individual appliances in your home. Connect your TV, Fridge, AC, etc., through the Smart Socket and manage them directly from the Powercore App. Each powercell you buy comes with a smart socket.',
 };
 
 export const productPowercoreAppFeatures = [

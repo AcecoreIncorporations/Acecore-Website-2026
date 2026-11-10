@@ -176,7 +176,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -191,7 +191,8 @@
   font-size: 0.78rem;
   font-weight: 500;
   line-height: 1.2;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pricing-card__details {
@@ -260,6 +261,40 @@
   white-space: nowrap;
 }
 
+.pricing-card__instalments-contact {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-color: rgba(92, 254, 229, 0.65);
+  text-underline-offset: 0.2em;
+  transition: color 180ms ease;
+}
+
+.pricing-card__instalments-contact:hover,
+.pricing-card__instalments-contact:focus-visible {
+  color: #5cfee5;
+}
+
+.pricing-card__instalments-contact:focus-visible {
+  outline: 2px solid #5cfee5;
+  outline-offset: 3px;
+}
+
+.pricing-card__instalments-info-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
 .pricing-card__cta {
   display: inline-flex;
   align-items: center;
@@ -319,8 +354,8 @@
   }
 
   .pricing-card__instalments {
-    margin-top: 2.25rem;
-    padding-top: 2.25rem;
+    margin-top: 1.25rem;
+    padding-top: .25rem;
     gap: 0.75rem;
   }
 }
@@ -403,6 +438,12 @@
     min-height: 1.55rem;
     padding: 0.22rem 0.55rem;
     font-size: 0.7rem;
+  }
+
+  .pricing-card__spec--ultra-solar {
+    width: max-content;
+    max-width: calc(100vw - 3.5rem);
+    white-space: nowrap;
   }
 
   .pricing-card__chevron {
@@ -531,4 +572,3 @@
     justify-content: center;
   }
 }
-

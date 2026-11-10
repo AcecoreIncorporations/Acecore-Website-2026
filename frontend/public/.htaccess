@@ -22,29 +22,44 @@
   RewriteRule ^api/health/?$ api/pricing.php [L,QSA]
 
   # ----------------------------------------------------------------------------
-  # 2. React Single Page Application (SPA) Routing Fallback
+  # 2. Canonical route redirects and direct public page loading
+  # ----------------------------------------------------------------------------
+  RewriteRule ^home/?$ / [R=301,L]
+  RewriteRule ^contact/?$ /support [R=301,L]
+  RewriteRule ^confirmation/?$ /order-confirmation [R=301,L]
+  RewriteRule ^(product|pricing|about|team|support|terms|request-quote|checkout|order-confirmation)/$ /$1 [R=301,L]
+  RewriteRule ^(product|pricing|about|team|support|terms|request-quote|checkout|order-confirmation)/?$ index.html [L]
+
+  # ----------------------------------------------------------------------------
+  # 3. Serve existing files; unknown paths remain genuine HTTP 404 responses
   # ----------------------------------------------------------------------------
   # If requested resource is an existing file or directory, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Otherwise, route all requests to index.html so React Router handles the page
-  RewriteRule ^ index.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
+ErrorDocument 404 /index.html
+
 # ------------------------------------------------------------------------------
-# 3. Security Headers
+# 4. Security Headers
 # ------------------------------------------------------------------------------
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Robots-Tag "noindex, nofollow" env=noindex_page
+</IfModule>
+
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Request_URI "^/(checkout|order-confirmation)/?$" noindex_page
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# 4. Gzip / Deflate Compression
+# 5. Gzip / Deflate Compression
 # ------------------------------------------------------------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/plain
@@ -62,7 +77,7 @@
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# 5. Static Assets Caching
+# 6. Static Assets Caching
 # ------------------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On

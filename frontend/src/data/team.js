@@ -35,12 +35,28 @@ const leadershipImages = [
 
 const operationsImages = [operations1, operations2, operations3, operations4];
 
-function placeholderMembers(groupId, count = 4, imageSet = []) {
-  return Array.from({ length: count }, (_, index) => ({
+const leadershipMembers = [
+  { name: 'Caleb Iwuoha', role: 'Chief Executive Officer / Head of Hardware' },
+  { name: 'Chikezie Okoro', role: 'Chief Technical Officer / Chief Brand Officer' },
+  { name: 'Chimka Anyanwu', role: 'Chief Sales & Marketing Officer' },
+  { name: 'Collins Okonkwo', role: 'Chief Financial Officer' },
+  { name: 'Adimchinobi Ogbonnia', role: 'Chief Operations Officer' },
+  { name: 'Innocent Destiny', role: 'Head of Software Engineering' },
+];
+
+const operationsMembers = [
+  { name: 'Chidubem Nwora', role: 'Hardware Engineer' },
+  { name: 'Thankgod Ekom', role: 'Hardware Engineer' },
+  { name: 'Godspower Ndukwe', role: 'Hardware Engineer' },
+  { name: 'Augustine Ubong', role: 'Inventory Manager' },
+];
+
+function buildMembers(groupId, imageSet = [], memberData = []) {
+  return imageSet.map((image, index) => ({
     id: `${groupId}-${index + 1}`,
-    name: null,
-    role: null,
-    image: imageSet[index] ?? null,
+    name: memberData[index]?.name ?? null,
+    role: memberData[index]?.role ?? null,
+    image,
   }));
 }
 
@@ -49,13 +65,13 @@ export const teamGroups = [
     id: 'leadership',
     title: 'Leadership',
     description: 'Setting the direction for a smarter energy future.',
-    members: placeholderMembers('leadership', 6, leadershipImages),
+    members: buildMembers('leadership', leadershipImages, leadershipMembers),
   },
 
   {
     id: 'operations',
     title: 'Operations',
     description: 'Keeping the people, products, and processes moving.',
-    members: placeholderMembers('operations', 4, operationsImages),
+    members: buildMembers('operations', operationsImages, operationsMembers),
   },
 ];

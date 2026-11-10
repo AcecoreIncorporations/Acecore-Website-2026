@@ -56,7 +56,7 @@ export const helpArticles = {
   'powercell-app': article(
     'Powercore App',
     'Control your energy. From anywhere.',
-    "The Powercore App gives you a clear view of your Powercell and your home's energy system. Monitor performance, understand your energy usage, make smarter decisions, and control connected devices — all from one place.",
+    "The Powercore App gives you a clear view of your Powercell and your home's energy system. Monitor performance, understand your energy usage, make smarter decisions, and control connected devices, all from one place.",
     {
       heading: 'What you can do',
       items: [
@@ -185,11 +185,6 @@ export const helpArticles = {
           description:
             'If supported, trigger a short status or backup test to confirm remote visibility and that alerts are reaching your phone.',
         },
-        {
-          title: 'Save installer details',
-          description:
-            'Store your installer contact information in the app notes or account profile so support can escalate faster if needed.',
-        },
       ],
     },
   ),
@@ -247,9 +242,9 @@ export const helpArticles = {
             'If timestamps stop updating, refresh the app and confirm the Powercell is still connected before assuming a hardware fault.',
         },
         {
-          title: 'Compare to yesterday',
+          title: 'Compare to previous activity/data',
           description:
-            'Use the summary trends to spot unusual consumption or generation changes early in the day.',
+            'Use the summary trends to spot unusual consumption or generation changes early enough. ',
         },
         {
           title: 'Keep notifications enabled',
@@ -330,7 +325,7 @@ export const helpArticles = {
         {
           title: 'Do not confuse delay with failure',
           description:
-            'Brief reporting delays can happen after reconnects. Wait a short interval and refresh before escalating.',
+            'Brief reporting delays can happen after reconnections. Wait a short interval and refresh before escalating.',
         },
       ],
     },
@@ -376,7 +371,7 @@ export const helpArticles = {
         {
           title: 'Start with the headline metrics',
           description:
-            'Review total consumption, storage utilization, and notable peaks before drilling into individual days.',
+            'Review total consumption, storage utilization, and notable peaks before drifting into individual days.',
         },
         {
           title: 'Compare like with like',
@@ -410,7 +405,7 @@ export const helpArticles = {
   'ai-recommendations': article(
     'AI Recommendations',
     'Smarter suggestions from your energy data.',
-    'AI Recommendations use your Powercell activity and household patterns to highlight practical ways to store, use, and protect energy more effectively. Suggestions are guidance — you stay in control of every change.',
+    'AI Recommendations use your Powercell activity and household patterns to highlight practical ways to store, use, and protect energy more effectively. Suggestions are guidance; you stay in control of every change.',
     {
       heading: 'Types of recommendations',
       items: [
@@ -675,7 +670,7 @@ export const helpArticles = {
         {
           title: 'Avoid stacking changes',
           description:
-            'Change one variable at a time — network, app version, mode, or account — so you know what fixed the problem.',
+            'Change one variable at a time; network, app version, mode, or account, so you know what fixed the problem.',
         },
         {
           title: 'Use topic-specific guides',
@@ -822,7 +817,7 @@ export const helpArticles = {
         {
           title: 'Document the offline duration',
           description:
-            'Note when the device went offline and whether it coincided with storms, ISP issues, or setting changes.',
+            'Note when the device goes offline and whether it coincided with storms, ISP issues, or setting changes.',
         },
         {
           title: 'Contact support if still offline',
@@ -858,7 +853,7 @@ export const helpArticles = {
         {
           title: 'Partial updates',
           description:
-            'Some cards refresh while others remain stuck, which often points to a sync delay rather than a full outage.',
+            'Some widgets refresh while others remain stuck, which often points to a sync delay rather than a full outage.',
         },
         {
           title: 'Analytics lag',
@@ -985,7 +980,7 @@ export const helpArticles = {
         {
           title: 'Use the ownership email',
           description:
-            'Prefer the email from your order or installer handover. That address is usually tied to warranty and device ownership.',
+            'Preferably the email from your order or installer handover. That address is usually tied to warranty and device ownership.',
         },
         {
           title: 'Keep recovery information current',

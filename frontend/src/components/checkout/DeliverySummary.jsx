@@ -19,6 +19,17 @@ export default function DeliverySummary({ view }) {
           </Link>
         </div>
 
+        {view.deliveryState ? (
+          <div className="checkout-block">
+            <div className="checkout-block__copy">
+              <p className="checkout-block__title">{view.deliveryState}</p>
+            </div>
+            <Link className="checkout-link" to={view.changeStateHref}>
+              {checkoutCopy.changeDelivery}
+            </Link>
+          </div>
+        ) : null}
+
         <div className="checkout-block">
           <div className="checkout-block__copy">
             <p className="checkout-block__title">{view.address}</p>

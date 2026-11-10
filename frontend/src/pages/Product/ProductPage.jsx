@@ -6,6 +6,7 @@ import ProductCompareIntro from '../../components/sections/ProductCompareIntro';
 import ProductMechanicalSpecs from '../../components/sections/ProductMechanicalSpecs';
 import ProductPowerOptions from '../../components/sections/ProductPowerOptions';
 import ProductPowercoreApp from '../../components/sections/ProductPowercoreApp';
+import ProductSmartSocket from '../../components/sections/ProductSmartSocket';
 import HomeSupport from '../../components/sections/HomeSupport';
 import HomeEcosystem from '../../components/sections/HomeEcosystem';
 
@@ -18,6 +19,7 @@ export default function ProductPage() {
       <ProductMechanicalSpecs />
       <ProductPowerOptions />
       <ProductPowercoreApp />
+      <ProductSmartSocket />
       <HomeSupport />
       <HomeEcosystem />
     </PageLayout>

@@ -148,7 +148,7 @@
 }
 
 .request-quote__option-note {
-  color: #818181;
+  color: #07d0b2;
   font-size: 0.75rem;
   line-height: 1.4;
 }
@@ -169,8 +169,7 @@
 }
 
 .request-quote__disclaimer a,
-.request-quote__caption a,
-.request-quote__updates-link {
+.request-quote__caption a {
   color: var(--color-brand);
   text-decoration: underline;
   text-underline-offset: 0.15em;
@@ -260,6 +259,7 @@
 }
 
 .request-quote__field input,
+.request-quote__field select,
 .request-quote__phone input {
   width: 100%;
   min-height: 3.15rem;
@@ -273,9 +273,11 @@
   font-size: 1rem;
   outline: none;
   box-sizing: border-box;
+  color-scheme: dark;
 }
 
 .request-quote__field input:focus,
+.request-quote__field select:focus,
 .request-quote__phone:focus-within {
   border-color: var(--color-brand);
 }
@@ -360,29 +362,6 @@
   color: #818181;
   font-size: 0.875rem;
   line-height: 1.5;
-}
-
-.request-quote__checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.9375rem;
-  cursor: pointer;
-}
-
-.request-quote__checkbox input {
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-top: 0.15rem;
-  flex-shrink: 0;
-  accent-color: var(--color-brand);
-}
-
-.request-quote__updates-link {
-  display: inline-block;
-  margin-top: -0.35rem;
-  font-size: 0.875rem;
 }
 
 .request-quote__legal {
@@ -914,7 +893,7 @@
   .quote-receipt__table td:nth-child(3),
   .quote-receipt__table td:nth-child(4),
   .quote-receipt__table td:nth-child(5) {
-    width: 4.5rem;
+    width: 5.5rem;
     text-align: center;
   }
 
@@ -1062,6 +1041,7 @@
 
 .quote-receipt-modal__actions {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
   padding: 0.95rem 1.1rem 1.15rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1075,6 +1055,7 @@
 }
 
 .quote-receipt-modal__dismiss {
+  grid-column: 1 / -1;
   width: 100%;
   min-height: 2.75rem;
   margin: 0;
@@ -1121,6 +1102,10 @@
     align-items: center;
     gap: 0.85rem;
     padding: 1.1rem 1.35rem 1.25rem;
+  }
+
+  .quote-receipt-modal__dismiss {
+    grid-column: auto;
   }
 
   .quote-receipt-modal__dismiss {

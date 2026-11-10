@@ -69,8 +69,20 @@ export default function PricingPlans() {
                         {plan.prices[mode]}
                       </p>
                       <ul className="pricing-card__specs">
-                        {plan.specs.map((spec) => (
-                          <li key={spec}>{spec}</li>
+                        {[
+                          ...plan.specs,
+                          ...(mode === 'solar' ? plan.solarSpecs || [] : []),
+                        ].map((spec) => (
+                          <li
+                            key={spec}
+                            className={
+                              plan.id === 'ultra' && plan.solarSpecs?.includes(spec)
+                                ? 'pricing-card__spec--ultra-solar'
+                                : undefined
+                            }
+                          >
+                            {spec}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -93,13 +105,30 @@ export default function PricingPlans() {
                           {copy.instalmentLabel}
                         </p>
                         <ul className="pricing-card__instalments-list">
-                          {plan.instalments.map((row) => (
+                          {plan.instalments[mode].map((row) => (
                             <li key={row.label} className="pricing-card__instalment-row">
                               <span className="pricing-card__instalment-label">{row.label}</span>
                               <span className="pricing-card__instalment-amount">{row.amount}</span>
                             </li>
                           ))}
                         </ul>
+                        <a
+                          className="pricing-card__instalments-contact"
+                          href="https://wa.me/2349015294724"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <svg
+                            className="pricing-card__instalments-info-icon"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            aria-hidden="true"
+                          >
+                            <circle cx="10" cy="10" r="8" />
+                            <path d="M10 9v5m0-8h.01" />
+                          </svg>
+                          <span>Contact us to pay in instalments</span>
+                        </a>
                       </div>
 
                       <Link

@@ -9,53 +9,77 @@ export const pricingCopy = {
   description:
     'Compare Powercell models and choose the system that fits your energy needs.',
   cta: 'Get Your Powercell',
-  instalmentLabel: 'Installation payment',
+  instalmentLabel: 'Payment Plans',
 };
 
 export const pricingPlans = [
   {
     id: 'prime',
     name: 'POWERCELL PRIME',
-    amount: 2_500_000,
+    amount: 3_050_000,
     prices: {
-      solar: '₦2,500,000',
-      powercell: '₦2,500,000',
+      solar: '₦3,050,000',
+      powercell: '₦2,600,000',
     },
     specs: ['3.5kVA Output', '5kWh Capacity'],
-    instalments: [
-      { label: '3 Months (+7% interest)', amount: '₦891,700' },
-      { label: '4 Months (+10% interest)', amount: '₦687,500' },
-      { label: '5 Months (+13% interest)', amount: '₦565,000' },
-    ],
+    solarSpecs: ['Three 610w Panels'],
+    instalments: {
+      solar: [
+        { label: '3 Months (+7% interest)', amount: '₦1,087,833' },
+        { label: '4 Months (+10% interest)', amount: '₦838,750' },
+        { label: '5 Months (+13% interest)', amount: '₦689,300' },
+      ],
+      powercell: [
+        { label: '3 Months (+7% interest)', amount: '₦927,333' },
+        { label: '4 Months (+10% interest)', amount: '₦715,000' },
+        { label: '5 Months (+13% interest)', amount: '₦587,600' },
+      ],
+    },
   },
   {
     id: 'prime-plus',
     name: 'POWERCELL PRIME+',
-    amount: 4_300_000,
+    amount: 5_200_000,
     prices: {
-      solar: '₦4,300,000',
+      solar: '₦5,200,000',
       powercell: '₦4,300,000',
     },
     specs: ['5kVA Output', '10kWh Capacity'],
-    instalments: [
-      { label: '3 Months (+7% interest)', amount: '₦1,533,700' },
-      { label: '4 Months (+10% interest)', amount: '₦1,182,500' },
-      { label: '5 Months (+13% interest)', amount: '₦971,800' },
-    ],
+    solarSpecs: ['Six 610w Panels'],
+    instalments: {
+      solar: [
+        { label: '3 Months (+7% interest)', amount: '₦1,854,667' },
+        { label: '4 Months (+10% interest)', amount: '₦1,430,000' },
+        { label: '5 Months (+13% interest)', amount: '₦1,175,200' },
+      ],
+      powercell: [
+        { label: '3 Months (+7% interest)', amount: '₦1,533,667' },
+        { label: '4 Months (+10% interest)', amount: '₦1,182,500' },
+        { label: '5 Months (+13% interest)', amount: '₦971,800' },
+      ],
+    },
   },
   {
     id: 'ultra',
     name: 'POWERCELL ULTRA',
-    amount: 7_500_000,
+    amount: 10_000_000,
     prices: {
-      solar: '₦7,500,000',
-      powercell: '₦7,500,000',
+      solar: '₦10,000,000',
+      powercell: '₦8,200,000',
     },
-    specs: ['10kVA Output', '15kWh Capacity'],
-    instalments: [
-      { label: '3 Months (+7% interest)', amount: '₦2,675,000' },
-      { label: '4 Months (+10% interest)', amount: '₦2,062,500' },
-      { label: '5 Months (+13% interest)', amount: '₦1,695,000' },
-    ],
+    specs: ['10kVA Output', '20kWh Capacity'],
+    solarSpecs: ['Twelve 610w Panels'],
+    instalments: {
+      solar: [
+        { label: '3 Months (+7% interest)', amount: '₦3,566,667' },
+        { label: '4 Months (+10% interest)', amount: '₦2,750,000' },
+        { label: '5 Months (+13% interest)', amount: '₦2,260,000' },
+      ],
+      powercell: [
+        { label: '3 Months (+7% interest)', amount: '₦2,924,667' },
+        { label: '4 Months (+10% interest)', amount: '₦2,255,000' },
+        { label: '5 Months (+13% interest)', amount: '₦1,853,200' },
+      ],
+    },
   },
 ];

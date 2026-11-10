@@ -1,4 +1,3 @@
-import { formatNaira } from '../lib/formatNaira';
 import { isCheckoutReady } from '../lib/quoteSession';
 
 export const confirmationCopy = {
@@ -7,16 +6,11 @@ export const confirmationCopy = {
     'Your Powercell order has been received. We’ll keep you updated as it moves through fulfillment.',
   orderLabel: 'ORDER',
   statusEyebrow: 'Current status',
-  nextTitle: 'What happens next',
-  detailsTitle: 'Order details',
-  deliveringTo: 'Delivering to',
-  trackOrder: 'Track order',
-  trackPending: 'Tracking becomes available once your order ships.',
+  salesContactTitle: 'Speak with our sales team to learn more about your order',
   emptyTitle: 'No confirmed order found.',
   emptyDescription: 'Place an order from checkout to see confirmation details.',
   emptyCheckout: 'Return to Checkout',
   emptyPricing: 'Return to Pricing',
-  priceUnavailable: '₦ —',
 };
 
 export const orderStatuses = {
@@ -25,51 +19,26 @@ export const orderStatuses = {
     label: 'Order received',
     description: 'We’re preparing your order.',
     progress: 0.78,
-    activeStep: 1,
   },
   preparing: {
     id: 'preparing',
     label: 'Preparing your Powercell',
     description: 'Your unit is being prepared and checked before dispatch.',
     progress: 0.5,
-    activeStep: 2,
   },
   shipped: {
     id: 'shipped',
     label: 'On the way',
     description: 'Tracking details will be shared as your order ships.',
     progress: 0.82,
-    activeStep: 3,
   },
   delivered: {
     id: 'delivered',
     label: 'Delivered',
     description: 'Your Powercell has been delivered.',
     progress: 1,
-    activeStep: 3,
   },
 };
-
-export const confirmationTimeline = [
-  {
-    id: 'received',
-    number: '01',
-    title: 'Order received',
-    description: 'Your order and payment have been confirmed.',
-  },
-  {
-    id: 'preparing',
-    number: '02',
-    title: 'Preparing your Powercell',
-    description: 'Your unit will be prepared and checked before dispatch.',
-  },
-  {
-    id: 'delivery',
-    number: '03',
-    title: 'Delivery',
-    description: 'Tracking details will be shared once your order ships.',
-  },
-];
 
 function createOrderId() {
   return `AC-${String(Math.floor(10000 + Math.random() * 90000))}`;
@@ -119,13 +88,6 @@ export function formatOrderDate(iso) {
     day: 'numeric',
     year: 'numeric',
   });
-}
-
-export function formatOrderPrice(amount) {
-  if (!Number.isFinite(Number(amount)) || Number(amount) <= 0) {
-    return confirmationCopy.priceUnavailable;
-  }
-  return formatNaira(amount);
 }
 
 export function confirmationEmptyAction() {

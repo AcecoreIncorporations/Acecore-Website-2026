@@ -184,7 +184,7 @@ export const cleanEnergyCopy = {
     'We believe reliable energy has the power to transform lives, unlock endless possibilities, and build a cleaner future. We’re putting that power in your hands so you can live, create, and build without limits.',
   cta: {
     label: 'View products',
-    to: '/product',
+    to: '/pricing',
   },
 };
 

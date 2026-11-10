@@ -10,6 +10,12 @@ Official public website for Acecore — renewable clean energy generation and ba
 - **cPanel Production Backend (Native PHP)**: Zero-dependency PHP API located in `api/` (`contact.php`, `pricing.php`, `pricing.json`) configured with `.htaccess` for Apache URL rewriting and SPA fallback. Runs natively on 100% of cPanel and XAMPP setups.
 - **Node.js Local Dev Backend**: Optional Node.js REST API server in `backend/` for local standalone API development.
 
+### Rendering and SEO behavior
+
+The frontend is a client-rendered React SPA; the production build does not prerender route content. Vite generates `robots.txt` and `sitemap.xml` from the canonical, indexable entries in `frontend/src/data/seoData.js`. Route-specific titles, descriptions, canonical URLs, social metadata, and robots directives are applied by the React app after it loads. Consequently, those per-route values and page content are not present in the initial HTML response. If dependable server-rendered or prerendered route HTML is required, adopt a prerendering solution as a separately scoped rendering change.
+
+The Apache deployment rules provide permanent redirects for legacy aliases, a genuine HTTP 404 for unknown paths, and an `X-Robots-Tag: noindex` header for transaction routes. This behavior applies to the cPanel/Apache package only; configure equivalent redirects, indexing controls, and status handling separately if the site is hosted elsewhere.
+
 ---
 
 ## Quick Start (Local Development)

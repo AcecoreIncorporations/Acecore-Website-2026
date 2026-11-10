@@ -1,5 +1,9 @@
 import logoWhite from '../../assets/logos/acecore-white.svg';
-import { quoteReceiptMeta } from '../../data/requestQuote';
+import {
+  getQuoteReceiptAddOns,
+  quoteReceiptMeta,
+  quoteStates,
+} from '../../data/requestQuote';
 
 function formatOrdinalDate(date = new Date()) {
   const day = date.getDate();
@@ -22,12 +26,13 @@ function parseDisplayPrice(price) {
 }
 
 function formatCurrency(amount) {
-  return `₦${amount.toLocaleString('en-NG')}*`;
+  return `₦${amount.toLocaleString('en-NG')}`;
 }
 
 export default function QuoteReceipt({ form, packageItem, quotationNumber }) {
   const customerName = `${form.firstName} ${form.lastName}`.trim().toUpperCase();
   const location = form.installationAddress.trim().toUpperCase();
+  const state = quoteStates.find(([value]) => value === form.state)?.[1];
   const dateLabel = formatOrdinalDate();
 
   const productRow = {
@@ -42,10 +47,15 @@ export default function QuoteReceipt({ form, packageItem, quotationNumber }) {
     total: packageItem.price,
   };
 
-  const rows = [productRow, ...quoteReceiptMeta.addOns];
+  const addOns = getQuoteReceiptAddOns(
+    packageItem.config,
+    form.facilityType,
+    form.state,
+  );
+  const rows = [productRow, ...addOns];
   const totalAmount =
     parseDisplayPrice(packageItem.price) +
-    quoteReceiptMeta.addOns.reduce(
+    addOns.reduce(
       (sum, row) => sum + parseDisplayPrice(row.total),
       0,
     );
@@ -73,10 +83,15 @@ export default function QuoteReceipt({ form, packageItem, quotationNumber }) {
           <p>
             <span>LOCATION:</span> <strong>{location || '—'}</strong>
           </p>
+          {state ? (
+            <p>
+              <span>STATE:</span> <strong>{state.toUpperCase()}</strong>
+            </p>
+          ) : null}
         </div>
         <div className="quote-receipt__quote-id">
           <h3>
-            QUOTATION <span>#{quotationNumber}</span>
+            QUOTATION {/* <span>#{quotationNumber}</span> */}
           </h3>
           <p>
             <span>Date:</span> {dateLabel}
